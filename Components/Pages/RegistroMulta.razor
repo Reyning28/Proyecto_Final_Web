@@ -1,0 +1,368 @@
+@page "/registro-multa"
+@using Digesett.Services
+@using Digesett.Models
+@using Digesett.Constants
+@using Microsoft.AspNetCore.Components.Forms
+@inject IAgentService AgentService
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+@inject IWebHostEnvironment Environment
+@rendermode InteractiveServer
+
+
+
+<div class="registro-multa">
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert @alertClass">
+            @message
+        </div>
+    }
+    <div class="form-container">
+        <h2>Registro de Multa 📝</h2>
+
+        <EditForm Model="@fine" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Cédula del Ciudadano</label>
+                    <InputText @bind-Value="fine.CitizenCedula" />
+                    <ValidationMessage For="@(() => fine.CitizenCedula)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre del Ciudadano</label>
+                    <InputText @bind-Value="fine.CitizenName" />
+                    <ValidationMessage For="@(() => fine.CitizenName)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Concepto</label>
+                    <InputSelect @bind-Value="fine.Concept">
+                        <option value="">Seleccione un concepto</option>
+                        @foreach (var concept in concepts)
+                        {
+                            <option value="@concept">@concept</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => fine.Concept)" />
+                </div>
+
+                <div class="form-group">
+                    <label>Latitud</label>
+                    <InputNumber @bind-Value="fine.Latitude" class="form-control" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label>Longitud</label>
+                    <InputNumber @bind-Value="fine.Longitude" class="form-control" readonly />
+                </div>
+
+                <div class="form-group full-width">
+                    <button type="button" class="btn-location" @onclick="GetCurrentLocation">
+                        📍 Obtener Ubicación Actual
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label>Monto</label>
+                    <InputNumber @bind-Value="fine.Amount" />
+                    <ValidationMessage For="@(() => fine.Amount)" />
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Descripción</label>
+                    <InputTextArea @bind-Value="fine.Description" rows="3" />
+                    <ValidationMessage For="@(() => fine.Description)" />
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Foto</label>
+                    <InputFile OnChange="HandleFileSelected" class="form-control" accept="image/*" />
+                </div>
+                <div class="image-preview">
+                    <img src="@imagePreview" alt="Preview" />
+                </div>
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn-secondary" @onclick="NavigateBack">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn-primary">
+                    Registrar Multa
+                </button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+<style>
+    .registro-multa {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .full-width {
+        grid-column: span 2;
+    }
+
+    label {
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #4a90e2;
+        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    }
+
+    .btn-location {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-location:hover {
+        background-color: #218838;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #4a90e2;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #357abd;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+    ::deep .validation-message {
+        color: #dc3545;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    media (max-width: 768px) {
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .full-width {
+            grid-column: auto;
+        }
+
+        .button-group {
+            flex-direction: column;
+        }
+
+        .button-group button {
+            width: 100%;
+        }
+    }
+
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    .alert-danger {
+        color: #721c24;
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+    }
+
+    .image-preview {
+        margin-top: 10px;
+    }
+
+    .image-preview img {
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 4px;
+    }
+</style>
+
+@code {
+    // Objeto que representa la multa a registrar
+    private Fine fine = new Fine();
+
+    // Mensaje para mostrar al usuario, por ejemplo, en caso de error o confirmación
+    private string message = "";
+
+    // Clase CSS utilizada para la alerta que muestra el mensaje
+    private string alertClass = "";
+
+    // URL de la imagen seleccionada para mostrar un previsualizado
+    private string imagePreview;
+
+    // Archivo seleccionado por el usuario
+    private IBrowserFile selectedFile;
+
+    // Lista de conceptos disponibles para la multa
+    private List<string> concepts = new()
+    {
+        "Exceso de velocidad",
+        "Semáforo en rojo",
+        "Estacionamiento prohibido",
+        "Sin cinturón de seguridad",
+        "Uso del celular mientras conduce",
+        "Documentos vencidos",
+        "Sin seguro obligatorio",
+        "Conducir en estado de ebriedad"
+    };
+
+    // Método para manejar la selección de un archivo de imagen
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        // Asignar el archivo seleccionado a la variable
+        selectedFile = e.File;
+
+        // Crear un preview de la imagen seleccionada
+        var format = "image/jpeg";
+        var resizedImage = await e.File.RequestImageFileAsync(format, 200, 200);  // Redimensionar la imagen a 200x200
+        var buffer = new byte[resizedImage.Size];
+        await resizedImage.OpenReadStream().ReadAsync(buffer);
+        imagePreview = $"data:{format};base64,{Convert.ToBase64String(buffer)}";  // Convertir la imagen a formato base64 para previsualización
+
+        StateHasChanged();  // Notificar al componente que el estado ha cambiado
+    }
+
+    // Método para obtener la ubicación actual del usuario
+    private async Task GetCurrentLocation()
+    {
+        try
+        {
+            // Invocar función JavaScript para obtener la posición actual
+            var location = await JSRuntime.InvokeAsync<LocationInfo>("getCurrentPosition");
+
+            // Asignar latitud y longitud a la multa
+            fine.Latitude = location.Latitude;
+            fine.Longitude = location.Longitude;
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier error que ocurra durante la obtención de la ubicación
+            Console.WriteLine(ex);
+        }
+    }
+
+    // Clase que representa la información de la ubicación
+    public class LocationInfo
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+
+    // Método para manejar el envío del formulario de registro de multa
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            // Si se seleccionó un archivo, subir la imagen y asignar la URL a la multa
+            if (selectedFile != null)
+            {
+                fine.PhotoUrl = await AgentService.UploadPhotoAsync(selectedFile);
+            }
+
+            // Asignar temporalmente el ID del agente (hasta que se implemente la autenticación)
+            fine.AgentId = "1";
+
+            // Crear la multa mediante el servicio correspondiente
+            await AgentService.CreateFineAsync(fine);
+
+            // Navegar a la lista de multas una vez registrada la multa
+            NavigationManager.NavigateTo("/lista-multas");
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier error durante el registro de la multa
+            message = "Error al registrar la multa";
+            alertClass = "alert-danger";  // Asignar la clase CSS para mostrar un mensaje de error
+        }
+    }
+
+    // Método para navegar de vuelta al dashboard
+    private void NavigateBack()
+    {
+        NavigationManager.NavigateTo("/dashboard");
+    }
+}
+

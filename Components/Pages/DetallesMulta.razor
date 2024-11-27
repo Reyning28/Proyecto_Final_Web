@@ -1,0 +1,237 @@
+@page "/detalles-multa/{Id}"
+@using Digesett.Data
+@using Digesett.Services
+@using Digesett.Models
+@inject IAgentService AgentService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<div class="detalles-multa">
+    <div class="container">
+        <div class="header">
+            <h2>Detalles de la Multa 📄</h2>
+            <button class="btn-back" @onclick="Volver">Volver</button>
+        </div>
+
+        @if (loading)
+        {
+            <div class="loading">Cargando...</div>
+        }
+        else if (multa == null)
+        {
+            <div class="error-state">
+                <p>No se encontró la multa solicitada</p>
+            </div>
+        }
+        else
+        {
+            <div class="details-grid">
+                <div class="detail-item">
+                    <label>Fecha:</label>
+                    <span>@multa.CreatedAt.ToString("dd/MM/yyyy HH:mm")</span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Ciudadano:</label>
+                    <span>@multa.CitizenName</span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Cédula:</label>
+                    <span>@multa.CitizenCedula</span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Concepto:</label>
+                    <span>@multa.Concept</span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Monto:</label>
+                    <span>RD$ @multa.Amount.ToString("N2")</span>
+                </div>
+
+                <div class="detail-item">
+                    <label>Estado:</label>
+                    <span class="status @GetStatusClass(multa.Status)">@multa.Status</span>
+                </div>
+
+                <div class="detail-item full-width">
+                    <label>Descripción:</label>
+                    <span>@multa.Description</span>
+                </div>
+
+                @if (!string.IsNullOrEmpty(multa.PhotoUrl))
+                {
+                    <div class="detail-item full-width">
+                        <label>Evidencia fotográfica:</label>
+                        <div class="image-container">
+                            <img src="@multa.PhotoUrl" alt="Evidencia de la multa" />
+                        </div>
+                    </div>
+                }               
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .detalles-multa {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .image-container {
+        margin-top: 10px;
+    }
+    .image-container img {
+        max-width: 100%;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        color: #333;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .detail-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-item.full-width {
+        grid-column: span 2;
+    }
+
+    label {
+        font-weight: 600;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .btn-back {
+        padding: 8px 16px;
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn-back:hover {
+        background-color: #5a6268;
+    }
+
+    .evidence-photo {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    .status {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+    }
+
+    .error-state {
+        text-align: center;
+        padding: 40px;
+        color: #666;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    media (max-width: 600px) {
+        .details-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .detail-item.full-width {
+            grid-column: auto;
+        }
+    }
+</style>
+
+@code {
+    // Parámetro que representa el identificador de la multa
+    [Parameter]
+    public string Id { get; set; }
+
+    // Variable que almacena la información de la multa
+    private Fine multa;
+
+    // Indicador para determinar si la página se encuentra en estado de carga
+    private bool loading = true;
+
+    // Método que se ejecuta al inicializar el componente
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            loading = true;  // Establecer el indicador de carga a true
+
+            // Obtener la multa por el identificador proporcionado
+            multa = await AgentService.GetFineByIdAsync(Id);
+        }
+        catch (Exception ex)
+        {
+            // Manejar el error e imprimir la excepción en la consola
+            Console.WriteLine(ex);
+        }
+        finally
+        {
+            loading = false;  // Establecer el indicador de carga a false al finalizar
+        }
+    }
+
+    // Método que devuelve la clase CSS correspondiente al estado de la multa
+    private string GetStatusClass(string status)
+    {
+        return status switch
+        {
+            "Active" => "status-active",  // Clase CSS para multas activas
+            "Paid" => "status-paid",  // Clase CSS para multas pagadas
+            "Forgiven" => "status-forgiven",  // Clase CSS para multas perdonadas
+            _ => ""  // Clase CSS por defecto si el estado no coincide
+        };
+    }
+
+    // Método que redirige al usuario a la lista de multas
+    private void Volver()
+    {
+        NavigationManager.NavigateTo("/lista-multas");
+    }
+}

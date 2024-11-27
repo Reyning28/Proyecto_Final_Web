@@ -1,0 +1,237 @@
+@page "/comisiones"
+@using Digesett.Services
+@using Digesett.Models
+@inject IAgentService AgentService
+
+<div class="comisiones-container">
+    <div class="main-panel">
+        <h2>Comisión del Mes 💰</h2>
+
+        <div class="panels-grid">
+            <div class="total-panel">
+                <div class="total-content">
+                    <h3>Total de Comisión</h3>
+                    <div class="amount">RD$ @totalComision.ToString("N2")</div>
+                    <div class="period">@DateTime.Now.ToString("MMMM yyyy")</div>
+                </div>
+            </div>
+
+            <div class="stats-panel">
+                <h3>Estadísticas del Mes</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Multas</span>
+                        <span class="stat-value">@totalMultas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Promedio por Multa</span>
+                        <span class="stat-value">RD$ @promedioComision.ToString("N2")</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-panel">
+            <h3>Últimos 5 Aportes</h3>
+            @if (ultimasMultas == null || !ultimasMultas.Any())
+            {
+                <p class="no-data">No hay aportes recientes</p>
+            }
+            else
+            {
+                <div class="aportes-list">
+                    @foreach (var multa in ultimasMultas)
+                    {
+                        <div class="aporte-item">
+                            <div class="aporte-info">
+                                <div class="aporte-concept">@multa.Concept</div>
+                                <div class="aporte-date">@multa.CreatedAt.ToString("dd/MM/yyyy HH:mm")</div>
+                            </div>
+                            <div class="aporte-amount">
+                                RD$ @((multa.Amount * 0.10m).ToString("N2"))
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .comisiones-container {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-panel {
+        background: white;
+        border-radius: 8px;
+        padding: 24px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 24px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .panels-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .total-panel {
+        background: linear-gradient(135deg, #4a90e2, #357abd);
+        padding: 24px;
+        border-radius: 8px;
+        color: white;
+    }
+
+    .total-content {
+        text-align: center;
+    }
+
+    .amount {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 16px 0;
+    }
+
+    .period {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    .stats-panel {
+        background: #f8f9fa;
+        padding: 24px;
+        border-radius: 8px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .stat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .stat-label {
+        color: #666;
+    }
+
+    .stat-value {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .recent-panel {
+        background: #f8f9fa;
+        padding: 24px;
+        border-radius: 8px;
+        margin-top: 24px;
+    }
+
+    .aportes-list {
+        margin-top: 16px;
+    }
+
+    .aporte-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .aporte-concept {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .aporte-date {
+        font-size: 14px;
+        color: #666;
+        margin-top: 4px;
+    }
+
+    .aporte-amount {
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    .no-data {
+        text-align: center;
+        color: #666;
+        padding: 20px;
+    }
+
+    h3 {
+        color: #333;
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    media (max-width: 768px) {
+        .panels-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+@code {
+    // Variable que almacena el total de la comisión del agente
+    private decimal totalComision = 0;
+
+    // Variable que almacena el número total de multas registradas por el agente
+    private int totalMultas = 0;
+
+    // Variable que almacena el valor promedio de la comisión por multa
+    private decimal promedioComision = 0;
+
+    // Lista que almacena las últimas multas registradas
+    private List<Fine> ultimasMultas;
+
+    // Método que se ejecuta al inicializar el componente
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // ID del agente (temporal hasta implementar la autenticación)
+            string agentId = "1";
+
+            // Obtener la lista de multas asociadas al agente
+            var multas = await AgentService.GetAgentFinesAsync(agentId);
+            
+            // Calcular estadísticas
+            totalMultas = multas.Count;  // Total de multas
+            totalComision = multas.Sum(m => m.Amount * 0.10m);  // Comisión total (10% del monto de cada multa)
+            promedioComision = totalMultas > 0 ? totalComision / totalMultas : 0;  // Promedio de la comisión
+            
+            // Obtener las últimas 5 multas registradas por el agente
+            ultimasMultas = multas
+                .OrderByDescending(m => m.CreatedAt)  // Ordenar por fecha de creación descendente
+                .Take(5)  // Tomar las 5 primeras multas
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            // Imprimir la excepción en la consola (para propósitos de depuración)
+            Console.WriteLine(ex);
+            // Manejar el error si es necesario
+        }
+    }
+}
