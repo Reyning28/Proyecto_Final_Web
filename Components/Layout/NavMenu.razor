@@ -1,0 +1,38 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Digesett</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="login" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> login
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="registro-multa">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Registro Multa
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="mapa-multas">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Mapa
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Comisiones">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Comisiones
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="acerca-de">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> AcercaDe
+            </NavLink>
+        </div>
+    </nav>
+</div>
+

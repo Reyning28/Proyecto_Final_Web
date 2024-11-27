@@ -1,0 +1,68 @@
+@page "/mapa-multas"
+@using Digesett.Services
+@using Digesett.Models
+@inject IAgentService AgentService
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+
+<div class="mapa-container">
+    <h2>Mapa de Multas 🗺️</h2>
+    <div id="map" class="map"></div>
+</div>
+
+<style>
+    .mapa-container {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .map {
+        height: 600px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+</style>
+
+@code {
+    // Lista que almacena todas las multas registradas por el agente
+    private List<Fine> multas;
+
+    // Método que se ejecuta después de renderizar el componente
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Verificar si es la primera vez que se renderiza el componente
+        if (firstRender)
+        {
+            // Cargar los datos del mapa de multas
+            await LoadMapData();
+        }
+    }
+
+    // Método para cargar los datos de las multas y enviarlos al mapa
+    private async Task LoadMapData()
+    {
+        try
+        {
+            // ID del agente (temporal hasta implementar la autenticación)
+            string agentId = "1";
+
+            // Obtener la lista de multas asociadas al agente
+            multas = await AgentService.GetAgentFinesAsync(agentId);
+            
+            // Invocar la función JavaScript para inicializar el mapa con las multas obtenidas
+            await JSRuntime.InvokeVoidAsync("initializeMap", multas);
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier excepción que ocurra durante la carga de los datos
+            Console.WriteLine(ex);
+        }
+    }
+}

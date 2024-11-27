@@ -1,0 +1,234 @@
+@page "/lista-multas"
+@using Digesett.Data
+@using Digesett.Services
+@using Digesett.Models
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+@inject IAgentService AgentService
+
+<div class="lista-multas">
+    <div class="container">
+        <h2>Lista de Multas 📋</h2>
+
+        @if (loading)
+        {
+            <div class="loading">
+                Cargando...
+            </div>
+        }
+        else if (multas == null || !multas.Any())
+        {
+            <div class="empty-state">
+                <p>No hay multas registradas</p>
+            </div>
+        }
+        else
+        {
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Ciudadano</th>
+                            <th>Cédula</th>
+                            <th>Concepto</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var multa in multas)
+                        {
+                            <tr>
+                                <td>
+                                    @multa.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                                </td>
+                                <td>
+                                    @multa.CitizenName
+                                </td>
+                                <td>
+                                    @multa.CitizenCedula
+                                </td>
+                                <td>
+                                    @multa.Concept
+                                </td>
+                                <td>
+                                    RD$ @multa.Amount.ToString("N2")
+                                </td>
+                                <td>
+                                    <span class="status @GetStatusClass(multa.Status)">
+                                        @multa.Status
+                                    </span>
+                                </td>
+                                <td>
+                                    <button class="btn-view" @onclick="() => VerDetalles(multa.Id)">
+                                        Ver Detalles
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .lista-multas {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+        color: #333;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    .status {
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .status-active {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+    }
+
+    .status-paid {
+        background-color: #e3f2fd;
+        color: #1565c0;
+    }
+
+    .status-forgiven {
+        background-color: #f5f5f5;
+        color: #616161;
+    }
+
+    .btn-view {
+        padding: 6px 12px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .btn-view:hover {
+        background-color: #357abd;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 40px;
+        color: #666;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    media
+    (max-width: 768px) {
+        .table-container {
+            overflow-x: auto;
+        }
+
+        th,
+        td {
+            min-width: 120px;
+        }
+    }
+</style>
+
+@code {
+    // Lista que almacena todas las multas registradas por el agente
+    private List<Fine> multas;
+
+    // Indicador para determinar si la página se encuentra en estado de carga
+    private bool loading = true;
+
+    // Método que se ejecuta al inicializar el componente
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            loading = true;  // Establecer el indicador de carga a true
+
+            // ID del agente (temporal hasta implementar la autenticación)
+            string agentId = "1";
+
+            // Obtener la lista de multas asociadas al agente
+            multas = await AgentService.GetAgentFinesAsync(agentId);
+        }
+        finally
+        {
+            loading = false;  // Establecer el indicador de carga a false al finalizar
+        }
+    }
+
+    // Método que devuelve la clase CSS correspondiente al estado de la multa
+    private string GetStatusClass(string status)
+    {
+        return status switch
+        {
+            "Active" => "status-active",  // Clase CSS para multas activas
+            "Paid" => "status-paid",  // Clase CSS para multas pagadas
+            "Forgiven" => "status-forgiven",  // Clase CSS para multas perdonadas
+            _ => ""  // Clase CSS por defecto si el estado no coincide
+        };
+    }
+
+    // Método para navegar a los detalles de una multa específica
+    private void VerDetalles(string id)
+    {
+        // Navegar a la página de detalles de la multa específica usando el ID proporcionado
+        NavigationManager.NavigateTo($"/detalles-multa/{id}");
+    }
+}
