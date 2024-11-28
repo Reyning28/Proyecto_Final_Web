@@ -1,0 +1,52 @@
+/* Color del texto de los enlaces de la barra de navegación */
+.navbar-nav .nav-link {
+    color: #ffffff; /* Blanco */
+    font-size: 16px; /* Tamaño ajustable */
+    font-weight: bold; /* Negrita para destacar */
+    transition: color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
+}
+
+/* Color del texto de la marca (título) de la navbar */
+.navbar-brand {
+    color: #ffffff; /* Blanco */
+    font-size: 20px; /* Tamaño mayor para resaltar el título */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas para dar más presencia */
+}
+
+/* Color de los enlaces al hacer hover */
+.navbar-nav .nav-link:hover {
+    color: #25e009; /* Color dorado */
+}
+
+/* Icono del menú hamburguesa */
+.navbar-toggler-icon {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 2px; /* Bordes ligeramente redondeados */
+}
+
+/* Color de fondo de la navbar */
+.navbar {
+    background-color: #359e05; /* Fondo de color vino */
+    padding: 10px 15px; /* Espaciado interno */
+}
+
+/* Input personalizado */
+.custom-input {
+    width: 300px; /* Ancho del input */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ffffff; /* Borde blanco */
+    color: #350119; /* Texto color vino */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+    .navbar-brand {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+}
