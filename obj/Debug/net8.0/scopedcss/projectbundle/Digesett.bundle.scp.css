@@ -1,100 +1,56 @@
-/* _content/Digesett/Components/Layout/MainLayout.razor.rz.scp.css */
-.page[b-kfd2k0kia3] {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+/* _content/Digesett/Components/Layout/FinalLayout.razor.rz.scp.css */
+/* Color del texto de los enlaces de la barra de navegación */
+.navbar-nav .nav-link[b-y53yghnvls] {
+    color: #ffffff; /* Blanco */
+    font-size: 16px; /* Tamaño ajustable */
+    font-weight: bold; /* Negrita para destacar */
+    transition: color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
 }
 
-main[b-kfd2k0kia3] {
-    flex: 1;
+/* Color del texto de la marca (título) de la navbar */
+.navbar-brand[b-y53yghnvls] {
+    color: #ffffff; /* Blanco */
+    font-size: 20px; /* Tamaño mayor para resaltar el título */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas para dar más presencia */
 }
 
-.sidebar[b-kfd2k0kia3] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+/* Color de los enlaces al hacer hover */
+.navbar-nav .nav-link:hover[b-y53yghnvls] {
+    color: #25e009; /* Color dorado */
 }
 
-.top-row[b-kfd2k0kia3] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
+/* Icono del menú hamburguesa */
+.navbar-toggler-icon[b-y53yghnvls] {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 2px; /* Bordes ligeramente redondeados */
 }
 
-    .top-row[b-kfd2k0kia3]  a, .top-row[b-kfd2k0kia3]  .btn-link {
-        white-space: nowrap;
-        margin-left: 1.5rem;
-        text-decoration: none;
-    }
-
-    .top-row[b-kfd2k0kia3]  a:hover, .top-row[b-kfd2k0kia3]  .btn-link:hover {
-        text-decoration: underline;
-    }
-
-    .top-row[b-kfd2k0kia3]  a:first-child {
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-@media (max-width: 640.98px) {
-    .top-row[b-kfd2k0kia3] {
-        justify-content: space-between;
-    }
-
-    .top-row[b-kfd2k0kia3]  a, .top-row[b-kfd2k0kia3]  .btn-link {
-        margin-left: 0;
-    }
+/* Color de fondo de la navbar */
+.navbar[b-y53yghnvls] {
+    background-color: #359e05; /* Fondo de color vino */
+    padding: 10px 15px; /* Espaciado interno */
 }
 
-@media (min-width: 641px) {
-    .page[b-kfd2k0kia3] {
-        flex-direction: row;
-    }
-
-    .sidebar[b-kfd2k0kia3] {
-        width: 250px;
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .top-row[b-kfd2k0kia3] {
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
-
-    .top-row.auth[b-kfd2k0kia3]  a:first-child {
-        flex: 1;
-        text-align: right;
-        width: 0;
-    }
-
-    .top-row[b-kfd2k0kia3], article[b-kfd2k0kia3] {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
+/* Input personalizado */
+.custom-input[b-y53yghnvls] {
+    width: 300px; /* Ancho del input */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ffffff; /* Borde blanco */
+    color: #350119; /* Texto color vino */
+    background-color: #ffffff; /* Fondo blanco */
 }
 
-#blazor-error-ui[b-kfd2k0kia3] {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
-
-    #blazor-error-ui .dismiss[b-kfd2k0kia3] {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link[b-y53yghnvls] {
+        font-size: 14px; /* Reduce el tamaño del texto en pantallas pequeñas */
     }
+    .navbar-brand[b-y53yghnvls] {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+}
 /* _content/Digesett/Components/Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-0hn5nzu30t] {
     appearance: none;
