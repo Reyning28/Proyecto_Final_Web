@@ -1,0 +1,89 @@
+@page "/modulo2/gestion-multas"
+@using Digesett.Models
+@using Digesett.Services
+@inject IAgentService AgentService
+
+<h3>Gestión de Multas</h3>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="input-group">
+            <input type="text" class="form-control" @bind="searchTerm" placeholder="Buscar por nombre o cédula...">
+            <button class="btn btn-primary" @onclick="SearchFines">Buscar</button>
+        </div>
+    </div>
+</div>
+
+@if (fines != null && fines.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Concepto</th>
+                    <th>Monto</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var multa in fines)
+                {
+                    <tr>
+                        <td>@multa.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@multa.CitizenCedula</td>
+                        <td>@multa.CitizenName</td>
+                        <td>@multa.Concept</td>
+                        <td>@multa.Amount.ToString("C")</td>
+                        <td>@multa.Status</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm" @onclick="@(() => UpdateFineStatus(multa.Id, "Cobrada"))">
+                                    Marcar Cobrada
+                                </button>
+                                <button class="btn btn-warning btn-sm" @onclick="@(() => UpdateFineStatus(multa.Id, "Perdonada"))">
+                                    Marcar Perdonada
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">No se encontraron multas.</div>
+}
+
+@code {
+    private List<Fine> fines;
+    private string searchTerm = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadFines();
+    }
+
+    private async Task LoadFines()
+    {
+        // TODO: Implementar la carga de multas desde el servicio
+        fines = new List<Fine>();
+    }
+
+    private async Task SearchFines()
+    {
+        // TODO: Implementar la búsqueda de multas
+        await LoadFines();
+    }
+
+    private async Task UpdateFineStatus(string fineId, string newStatus)
+    {
+        // TODO: Implementar la actualización del estado de la multa
+        await LoadFines();
+    }
+}

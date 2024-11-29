@@ -1,0 +1,103 @@
+@page "/modulo2/mapa-multas"
+@using Digesett.Models
+@inject IJSRuntime JSRuntime
+
+<h3>Mapa de Multas</h3>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="input-group">
+            <select class="form-select" @bind="selectedMonth">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    <option value="@i">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)</option>
+                }
+            </select>
+            <select class="form-select" @bind="selectedYear">
+                @for (int year = DateTime.Now.Year; year >= 2020; year--)
+                {
+                    <option value="@year">@year</option>
+                }
+            </select>
+            <button class="btn btn-primary" @onclick="LoadFinesForPeriod">Cargar Multas</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div id="map" style="height: 500px;"></div>
+    </div>
+    <div class="col-md-4">
+        @if (selectedFine != null)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Detalles de la Multa</h5>
+                    <p><strong>Fecha:</strong> @selectedFine.CreatedAt.ToLocalTime().ToString("dd/MM/yyyy HH:mm")</p>
+                    <p><strong>Ciudadano:</strong> @selectedFine.CitizenName</p>
+                    <p><strong>Cédula:</strong> @selectedFine.CitizenCedula</p>
+                    <p><strong>Concepto:</strong> @selectedFine.Concept</p>
+                    <p><strong>Descripción:</strong> @selectedFine.Description</p>
+                    <p><strong>Monto:</strong> @selectedFine.Amount.ToString("C")</p>
+                    <p><strong>Estado:</strong> @selectedFine.Status</p>
+                    @if (!string.IsNullOrEmpty(selectedFine.PhotoUrl))
+                    {
+                        <img src="@selectedFine.PhotoUrl" class="img-fluid" alt="Foto de la multa" />
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private int selectedMonth = DateTime.Now.Month;
+    private int selectedYear = DateTime.Now.Year;
+    private List<Fine> fines;
+    private Fine selectedFine;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await InitializeMap();
+            await LoadFinesForPeriod();
+        }
+    }
+
+    private async Task InitializeMap()
+    {
+        await JSRuntime.InvokeVoidAsync("initializeMap");
+    }
+
+    private async Task LoadFinesForPeriod()
+    {
+        // TODO: Implementar la carga de multas para el período seleccionado
+        fines = new List<Fine>();
+        await UpdateMapMarkers();
+    }
+
+    private async Task UpdateMapMarkers()
+    {
+        if (fines != null)
+        {
+            var markers = fines.Select(f => new
+            {
+                lat = f.Latitude,
+                lng = f.Longitude,
+                id = f.Id,
+                concept = f.Concept
+            }).ToList();
+
+            await JSRuntime.InvokeVoidAsync("updateMapMarkers", markers);
+        }
+    }
+
+    [JSInvokable]
+    public async Task OnMarkerClick(string fineId)
+    {
+        selectedFine = fines?.FirstOrDefault(f => f.Id == fineId);
+        StateHasChanged();
+    }
+}

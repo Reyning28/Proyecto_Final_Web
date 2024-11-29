@@ -1,6 +1,6 @@
 /* _content/Digesett/Components/Layout/FinalLayout.razor.rz.scp.css */
 /* Color del texto de los enlaces de la barra de navegación */
-.navbar-nav .nav-link[b-y53yghnvls] {
+.navbar-nav .nav-link[b-9wev5pm1o7] {
     color: #ffffff; /* Blanco */
     font-size: 16px; /* Tamaño ajustable */
     font-weight: bold; /* Negrita para destacar */
@@ -8,7 +8,7 @@
 }
 
 /* Color del texto de la marca (título) de la navbar */
-.navbar-brand[b-y53yghnvls] {
+.navbar-brand[b-9wev5pm1o7] {
     color: #ffffff; /* Blanco */
     font-size: 20px; /* Tamaño mayor para resaltar el título */
     font-weight: bold; /* Negrita */
@@ -16,24 +16,24 @@
 }
 
 /* Color de los enlaces al hacer hover */
-.navbar-nav .nav-link:hover[b-y53yghnvls] {
+.navbar-nav .nav-link:hover[b-9wev5pm1o7] {
     color: #25e009; /* Color dorado */
 }
 
 /* Icono del menú hamburguesa */
-.navbar-toggler-icon[b-y53yghnvls] {
+.navbar-toggler-icon[b-9wev5pm1o7] {
     background-color: #ffffff; /* Blanco */
     border-radius: 2px; /* Bordes ligeramente redondeados */
 }
 
 /* Color de fondo de la navbar */
-.navbar[b-y53yghnvls] {
+.navbar[b-9wev5pm1o7] {
     background-color: #359e05; /* Fondo de color vino */
     padding: 10px 15px; /* Espaciado interno */
 }
 
 /* Input personalizado */
-.custom-input[b-y53yghnvls] {
+.custom-input[b-9wev5pm1o7] {
     width: 300px; /* Ancho del input */
     padding: 5px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
@@ -44,10 +44,10 @@
 
 /* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
-    .navbar-nav .nav-link[b-y53yghnvls] {
+    .navbar-nav .nav-link[b-9wev5pm1o7] {
         font-size: 14px; /* Reduce el tamaño del texto en pantallas pequeñas */
     }
-    .navbar-brand[b-y53yghnvls] {
+    .navbar-brand[b-9wev5pm1o7] {
         font-size: 18px; /* Ajusta el tamaño del título */
     }
 }
