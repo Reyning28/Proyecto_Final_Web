@@ -1,39 +1,71 @@
 @inherits LayoutComponentBase
-
+@inject NavigationManager NavigationManager
 
 <div class="page">
     <div class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="/login">Web DIGESETT</a>
+            <a class="navbar-brand" href="#">Web DIGESETT</a> <!-- Logo de la aplicación -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span> <!-- Icono de menú para dispositivos móviles -->
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
+                    <li class="nav-item dropdown">
+                        <!-- Dropdown para seleccionar el módulo -->
+                        <a class="nav-link dropdown-toggle" href="#" id="modulosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccionar Módulo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="modulosDropdown">
+                            <li><a class="dropdown-item" href="/agentes">Módulo Agentes</a></li>
+                            <li><a class="dropdown-item" href="/oficina-central">Módulo Oficina Central</a></li>
+                            <li><a class="dropdown-item" href="/administrativo">Módulo Administrativo </a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/registro-multa">Registro Multas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/mapa-multas">Mapa Multas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/comisiones">Comisiones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/acerca-de">Acerca De</a>
-                    </li>
+                    @if (IsInModuleAgentes)
+                    {
+                        <!-- Opciones específicas del Módulo Agentes -->
+                        <li class="nav-item"><a class="nav-link" href="/registro-multa">Registro Multas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/mapa-multas">Mapa Multas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/comisiones">Comisiones</a></li>
+                    }
+                    else if (IsInModuleOficinaCentral)
+                    {
+                        <!-- Opciones específicas del Módulo Oficina Central -->
+                        <li class="nav-item"><a class="nav-link" href="/modulo2/gestion-multas">Gestionar Multas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/modulo2/reporte-ingresos">Reporte de Ingresos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/modulo2/mapa-multas-central">Mapa de Multas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/modulo2/gestion-agentes">Gestionar Agentes</a></li>
+                    }
+                    else if (IsInModuleAdministrativo)
+                    {
+                        <li class="nav-item"><a class="nav-link" href="/administrativo/gestionar-usuarios">Gestionar Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/administrativo/gestionar-conceptos-multas">Gestionar Conceptos de Multas</a></li>
+                    }
                 </ul>
             </div>
         </div>
     </div>
 
-
     <div class="container">
         @Body
     </div>
-
 </div>
+
+@code {
+    // Verifica si la URL actual corresponde al Módulo Agentes
+    private bool IsInModuleAgentes => NavigationManager.Uri.Contains("/agentes") || 
+                                    NavigationManager.Uri.Contains("/registro-multa") ||
+                                    NavigationManager.Uri.Contains("/mapa-multas") ||
+                                    NavigationManager.Uri.Contains("/comisiones");
+
+    // Verifica si la URL actual corresponde al Módulo Oficina Central
+    private bool IsInModuleOficinaCentral => NavigationManager.Uri.Contains("/oficina-central") ||
+                                            NavigationManager.Uri.Contains("/modulo2/gestion-multas") ||
+                                            NavigationManager.Uri.Contains("/modulo2/reporte-ingresos") ||
+                                            NavigationManager.Uri.Contains("/modulo2/mapa-multas-central") ||
+                                            NavigationManager.Uri.Contains("/modulo2/gestion-agentes");
+
+    // Verifica si la URL actual corresponde al Módulo Administrativo
+    private bool IsInModuleAdministrativo => NavigationManager.Uri.Contains("/administrativo");
+}

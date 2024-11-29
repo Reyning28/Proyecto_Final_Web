@@ -1,0 +1,82 @@
+@page "/modulo2/reporte-ingresos"
+@using Digesett.Models
+
+<h3>Reporte de Ingresos</h3>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <div class="input-group">
+            <select class="form-select" @bind="selectedMonth">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    <option value="@i">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)</option>
+                }
+            </select>
+            <select class="form-select" @bind="selectedYear">
+                @for (int year = DateTime.Now.Year; year >= 2020; year--)
+                {
+                    <option value="@year">@year</option>
+                }
+            </select>
+            <button class="btn btn-primary" @onclick="GenerateReport">Generar Reporte</button>
+        </div>
+    </div>
+</div>
+
+@if (reportData != null && reportData.Any())
+{
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Resumen de Ingresos - @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(selectedMonth) @selectedYear</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de Multa</th>
+                                    <th>Cantidad</th>
+                                    <th>Total Ingresado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in reportData)
+                                {
+                                    <tr>
+                                        <td>@item.Concept</td>
+                                        <td>@item.Count</td>
+                                        <td>@item.Total.ToString("C")</td>
+                                    </tr>
+                                }
+                                <tr class="table-info">
+                                    <td><strong>Total General</strong></td>
+                                    <td><strong>@reportData.Sum(x => x.Count)</strong></td>
+                                    <td><strong>@reportData.Sum(x => x.Total).ToString("C")</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private int selectedMonth = DateTime.Now.Month;
+    private int selectedYear = DateTime.Now.Year;
+    private List<ReportItem> reportData;
+
+    private class ReportItem
+    {
+        public string Concept { get; set; }
+        public int Count { get; set; }
+        public decimal Total { get; set; }
+    }
+
+    private async Task GenerateReport()
+    {
+        // TODO: Implementar la generación del reporte
+        reportData = new List<ReportItem>();
+    }
+}

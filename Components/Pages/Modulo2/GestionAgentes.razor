@@ -1,0 +1,146 @@
+@page "/modulo2/gestion-agentes"
+@using Digesett.Models
+@using Digesett.Services
+@inject IAgentService AgentService
+
+<h3>Gestión de Agentes</h3>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <button class="btn btn-primary" @onclick="() => ShowAgentModal()">Agregar Agente</button>
+    </div>
+</div>
+
+@if (agents != null && agents.Any())
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cédula</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var agent in agents)
+                {
+                    <tr>
+                        <td>@agent.Id</td>
+                        <td>@agent.Name</td>
+                        <td>@agent.Cedula</td>
+                        <td>@(agent.IsActive ? "Activo" : "Inactivo")</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-info btn-sm" @onclick="() => ShowAgentModal(agent)">
+                                    Editar
+                                </button>
+                                <button class="btn @(agent.IsActive ? "btn-warning" : "btn-success") btn-sm" 
+                                        @onclick="() => ToggleAgentStatus(agent)">
+                                    @(agent.IsActive ? "Desactivar" : "Activar")
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-info">No hay agentes registrados.</div>
+}
+
+@if (showModal)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@(selectedAgent == null ? "Agregar Agente" : "Editar Agente")</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" @bind="agentName" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cédula</label>
+                        <input type="text" class="form-control" @bind="agentCedula" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" @bind="agentPassword" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CloseModal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" @onclick="SaveAgent">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    private List<Agent> agents;
+    private bool showModal = false;
+    private Agent selectedAgent;
+    private string agentName;
+    private string agentCedula;
+    private string agentPassword;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAgents();
+    }
+
+    private async Task LoadAgents()
+    {
+        // TODO: Implementar la carga de agentes desde el servicio
+        agents = new List<Agent>();
+    }
+
+    private void ShowAgentModal(Agent agent = null)
+    {
+        selectedAgent = agent;
+        if (agent != null)
+        {
+            agentName = agent.Name;
+            agentCedula = agent.Cedula;
+            agentPassword = "";
+        }
+        else
+        {
+            agentName = "";
+            agentCedula = "";
+            agentPassword = "";
+        }
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+        selectedAgent = null;
+    }
+
+    private async Task SaveAgent()
+    {
+        // TODO: Implementar el guardado del agente
+        await LoadAgents();
+        CloseModal();
+    }
+
+    private async Task ToggleAgentStatus(Agent agent)
+    {
+        agent.IsActive = !agent.IsActive;
+        // TODO: Implementar el guardado del cambio de estado
+        await LoadAgents();
+    }
+}

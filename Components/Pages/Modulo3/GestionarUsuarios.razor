@@ -1,0 +1,27 @@
+@page "/administrativo/gestionar-usuarios"
+
+<h1 class="text-center mt-4">Gestionar Usuarios</h1>
+
+<p class="text-center">Aquí puedes agregar, editar y eliminar usuarios de la oficina central.</p>
+
+<!-- Formulario para gestionar usuarios -->
+<div class="container mt-4">
+    <form class="form-inline justify-content-center">
+        <div class="form-group mb-2">
+            <label for="nombre" class="sr-only">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="rol" class="sr-only">Rol:</label>
+            <select class="form-control" id="rol" name="rol">
+                <option value="admin">Administrador</option>
+                <option value="user">Usuario</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+    </form>
+</div>
+
+@code {
+    // Lógica para gestionar usuarios
+}
