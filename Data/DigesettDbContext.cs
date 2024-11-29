@@ -18,6 +18,9 @@ namespace Digesett.Data
         // Conjunto de datos que representa las multas
         public DbSet<Fine> Fines { get; set; }
 
+        // Conjunto de datos que representa los conceptos de multas
+        public DbSet<ConceptoMulta> ConceptosMultas { get; set; }
+
         // Método para configurar los modelos durante la creación del modelo
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

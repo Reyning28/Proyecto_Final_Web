@@ -90,6 +90,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL1JlcG9ydGVJbmdyZXNvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/GestionarConceptosMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0dlc3Rpb25hckNvbmNlcHRvc011bHRhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/GestionarUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0dlc3Rpb25hclVzdWFyaW9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/ModuloAdministrativo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL01vZHVsb0FkbWluaXN0cmF0aXZvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

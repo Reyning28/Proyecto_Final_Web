@@ -23,5 +23,10 @@ namespace Digesett.Services
 
         // Método para subir una foto asociada a una multa
         Task<string> UploadPhotoAsync(IBrowserFile file);
+
+        // Métodos para gestionar conceptos de multas
+        Task<List<string>> GetConceptosAsync();
+        Task AddConceptoAsync(string concepto);
+        Task DeleteConceptoAsync(string concepto);
     }
 }

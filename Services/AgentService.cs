@@ -99,5 +99,36 @@ namespace Digesett.Services
             // Retornar ruta relativa
             return $"/uploads/{fileName}";
         }
+
+        // Método para agregar un nuevo concepto de multa
+        public async Task AddConceptoAsync(string concepto)
+        {
+            if (!_context.ConceptosMultas.Any(c => c.Concept == concepto))
+            {
+                var newConcepto = new ConceptoMulta { Concept = concepto };
+                _context.ConceptosMultas.Add(newConcepto);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        // Método para obtener los conceptos de multas
+        public async Task<List<string>> GetConceptosAsync()
+        {
+            return await _context.ConceptosMultas
+                .Select(c => c.Concept)
+                .Distinct()
+                .ToListAsync();
+        }
+
+        // Método para eliminar un concepto de multa
+        public async Task DeleteConceptoAsync(string concepto)
+        {
+            var conceptoToDelete = await _context.ConceptosMultas.FirstOrDefaultAsync(c => c.Concept == concepto);
+            if (conceptoToDelete != null)
+            {
+                _context.ConceptosMultas.Remove(conceptoToDelete);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

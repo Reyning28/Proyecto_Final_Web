@@ -21,19 +21,23 @@ El Sistema de Gestión de Infracciones de Tránsito DIGESETT es una aplicación 
 - **Mapa de Multas**: Ver todas las infracciones en un mapa para un período seleccionado.
 - **Gestionar Agentes**: Agregar, editar y desactivar agentes.
 
+### 3. Módulo Administrativo
+- **Gestionar Conceptos de Multas**: Añadir, editar y eliminar conceptos de multas que pueden ser asignados a infracciones.
+- **Gestión de Usuarios**: (Pendiente) Implementar lógica para la gestión de usuarios.
+- **Autenticación**: (Pendiente) Añadir autenticación para acceder al módulo administrativo.
+
 ## Funcionalidades Pendientes para el Módulo 2
 - **Gestionar Multas**: Traer las multas creadas por el agente y permitir editar su estado.
 - **Reporte de Ingresos**: Ver el reporte de ingresos en base a las comisiones ganadas por el agente.
 - **Gestionar Agentes**: Agregar, editar y desactivar agentes.
+- **Estilos y Diseño**: Aplicar diseños a algunas páginas para mejorar la experiencia del usuario.
 
+## Funcionalidades Pendientes para el Módulo 3
+- Implementar autenticación para el acceso al módulo.
+- Desarrollar la lógica para la gestión de usuarios.
 
 ## Tecnologías Utilizadas
 - Blazor Server
 - Entity Framework Core
 - Bootstrap
 - BCrypt.Net para el hash de contraseñas
-
-## Contribuciones
-¡Las contribuciones son bienvenidas! Por favor, bifurca el repositorio y envía una solicitud de extracción para cualquier mejora.
-
-.
