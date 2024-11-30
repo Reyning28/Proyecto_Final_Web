@@ -1,75 +1,79 @@
 {
   "Files": [
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/Digesett.bundle.scp.css",
-      "PackagePath": "staticwebassets/Digesett.bundle.scp.css"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Digesett.pjnc5s0juo.bundle.scp.css"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Aaron.jpg",
-      "PackagePath": "staticwebassets/Images/Aaron.jpg"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Aaron.jpg",
+      "PackagePath": "staticwebassets\\Images\\Aaron.jpg"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Eduardo.jpeg",
-      "PackagePath": "staticwebassets/Images/Eduardo.jpeg"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Eduardo.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Eduardo.jpeg"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Jose Colon.jpeg",
-      "PackagePath": "staticwebassets/Images/Jose Colon.jpeg"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Jose Colon.jpeg",
+      "PackagePath": "staticwebassets\\Images\\Jose Colon.jpeg"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Reyning.jpg",
-      "PackagePath": "staticwebassets/Images/Reyning.jpg"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Reyning.jpg",
+      "PackagePath": "staticwebassets\\Images\\Reyning.jpg"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/app.css",
-      "PackagePath": "staticwebassets/app.css"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css.map",
-      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/favicon.png",
-      "PackagePath": "staticwebassets/favicon.png"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/js/map.js",
-      "PackagePath": "staticwebassets/js/map.js"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\js\\map.js",
+      "PackagePath": "staticwebassets\\js\\map.js"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
-      "PackagePath": "staticwebassets/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
+      "PackagePath": "staticwebassets\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
-      "PackagePath": "staticwebassets/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp",
+      "PackagePath": "staticwebassets\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
-      "PackagePath": "staticwebassets/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
+      "PackagePath": "staticwebassets\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
     },
     {
-      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
-      "PackagePath": "staticwebassets/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp"
+      "Id": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp",
+      "PackagePath": "staticwebassets\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Digesett.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Digesett.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Digesett.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Digesett.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Digesett.props",
       "PackagePath": "build\\Digesett.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Digesett.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Digesett.props",
       "PackagePath": "buildMultiTargeting\\Digesett.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Digesett.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Digesett.props",
       "PackagePath": "buildTransitive\\Digesett.props"
     }
   ],

@@ -2,6 +2,7 @@
 @using Digesett.Models
 @using Digesett.Services
 @inject IAgentService AgentService
+@rendermode InteractiveServer
 
 <h3>Gestión de Multas</h3>
 
@@ -63,6 +64,7 @@ else
 @code {
     private List<Fine> fines;
     private string searchTerm = "";
+    private string agentId = "123"; //esto podria ser dinamico segun la autenticacion
 
     protected override async Task OnInitializedAsync()
     {
@@ -72,18 +74,24 @@ else
     private async Task LoadFines()
     {
         // TODO: Implementar la carga de multas desde el servicio
-        fines = new List<Fine>();
+         // Llama al servicio para obtener las multas del agente
+        fines = await AgentService.GetAgentFinesAsync(agentId);
     }
 
     private async Task SearchFines()
     {
         // TODO: Implementar la búsqueda de multas
-        await LoadFines();
+        // Llama al servicio para buscar multas según el término de búsqueda
+        fines = await AgentService.SearchFines(agentId,searchTerm);
     }
 
     private async Task UpdateFineStatus(string fineId, string newStatus)
     {
         // TODO: Implementar la actualización del estado de la multa
+        //Llama al servicio para actualizar el estado de la multa
+        await AgentService.UpdateFineStatus(fineId,newStatus);
+
+        //recarga las multas despues de actulizar
         await LoadFines();
     }
 }

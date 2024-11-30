@@ -28,11 +28,11 @@ namespace Digesett.Models
 
         // Concepto de la multa, es obligatorio
         [Required(ErrorMessage = "El concepto es obligatorio")]
-        public string Concept { get; set; }
+        public string? Concept { get; set; }
 
         // Descripción detallada de la multa, es obligatoria
         [Required(ErrorMessage = "La descripción es obligatoria")]
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         // Monto de la multa, es obligatorio y debe ser mayor que 0
         [Required(ErrorMessage = "El monto es obligatorio")]
@@ -49,6 +49,6 @@ namespace Digesett.Models
         public string Status { get; set; } = "Active";
 
         // Identificador del agente que emitió la multa
-        public string AgentId { get; set; }
+        public string? AgentId { get; set; }
     }
 }

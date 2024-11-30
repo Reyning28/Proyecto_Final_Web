@@ -3276,25 +3276,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/eduardoliriano/.nuget/packages/": {}
+    "C:\\Users\\perdo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
+      "projectUniqueName": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\Digesett.csproj",
       "projectName": "Digesett",
-      "projectPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
-      "packagesPath": "/Users/eduardoliriano/.nuget/packages/",
-      "outputPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/",
+      "projectPath": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\Digesett.csproj",
+      "packagesPath": "C:\\Users\\perdo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/eduardoliriano/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\perdo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3311,8 +3317,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
-      }
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -3362,7 +3369,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

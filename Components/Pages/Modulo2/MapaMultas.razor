@@ -1,6 +1,8 @@
-@page "/modulo2/mapa-multas"
+@page "/modulo2/mapa-multas-central"
 @using Digesett.Models
 @inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
 
 <h3>Mapa de Multas</h3>
 
@@ -59,7 +61,8 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+    
+       if (firstRender)
         {
             await InitializeMap();
             await LoadFinesForPeriod();
@@ -100,4 +103,5 @@
         selectedFine = fines?.FirstOrDefault(f => f.Id == fineId);
         StateHasChanged();
     }
+  
 }
