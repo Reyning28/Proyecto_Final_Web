@@ -89,7 +89,7 @@
                 <button type="button" class="btn-secondary" @onclick="NavigateBack">
                     Cancelar
                 </button>
-                <button type="submit" class="btn-primary">
+                <button type="submit" class="btn-success">
                     Registrar Multa
                 </button>
             </div>
@@ -166,6 +166,7 @@
         cursor: pointer;
         width: 100%;
         margin: 10px 0;
+        transition: all 0.3s ease;
     }
 
     .btn-location:hover {
@@ -178,7 +179,7 @@
         gap: 10px;
     }
 
-    .btn-primary,
+    .btn-success,
     .btn-secondary {
         padding: 10px 20px;
         border: none;
@@ -188,13 +189,13 @@
         transition: all 0.3s ease;
     }
 
-    .btn-primary {
-        background-color: #4a90e2;
+    .btn-success {
+        background-color: #16b10b;
         color: white;
     }
 
-    .btn-primary:hover {
-        background-color: #357abd;
+    .btn-success:hover {
+        background-color: #1ecc08;
     }
 
     .btn-secondary {
@@ -362,7 +363,7 @@
     // Método para navegar de vuelta al dashboard
     private void NavigateBack()
     {
-        NavigationManager.NavigateTo("/dashboard");
+        NavigationManager.NavigateTo("/agentes");
     }
 }
 

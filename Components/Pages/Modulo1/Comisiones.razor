@@ -87,7 +87,7 @@
     }
 
     .total-panel {
-        background: linear-gradient(135deg, #4a90e2, #357abd);
+        background: linear-gradient(135deg, #03ad41, #35bd5e);
         padding: 24px;
         border-radius: 8px;
         color: white;
@@ -101,6 +101,11 @@
         font-size: 48px;
         font-weight: bold;
         margin: 16px 0;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto suave */
+    }
+    .amount:hover{
+        transform: scale(1.1); /* Agranda el botón un 10% */
     }
 
     .period {
