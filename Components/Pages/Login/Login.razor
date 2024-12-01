@@ -1,0 +1,137 @@
+@page "/"
+@page "/login"
+@using Digesett.Services
+@inject IAgentService AgentService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<div class="login-container">
+    <div class="login-box">
+        <h3>DIGESETT - Acceso de Agentes</h3>
+        
+        <div>
+            <label>Cédula:</label>
+            <input type="text" @bind="cedula" class="form-control" />
+        </div>
+        
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" @bind="password" class="form-control" />
+        </div>
+        
+        
+        
+        <button class="btn btn-primary" @onclick="HandleLogin">
+            Iniciar Sesión
+        </button>
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger">
+                @errorMessage
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra verticalmente */
+    background-color: #f8f9fa; /* Fondo claro */
+}
+
+.login-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajusta el ancho del formulario */
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px; /* Reduce el relleno interno */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 15px; /* Espaciado entre inputs */
+    border: 1px solid #ccc; /* Bordes suaves */
+    border-radius: 4px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.btn-primary {
+    width: 100%; /* Botón del ancho completo */
+    padding: 10px;
+    font-size: 14px;
+}
+.btn-primary {
+    background-color: #007bff; /* Color del botón */
+    color: white;             /* Color del texto */
+    padding: 10px 20px;       /* Tamaño del botón */
+    border: none;             /* Sin bordes */
+    border-radius: 5px;       /* Bordes redondeados */
+    cursor: pointer;          /* Cambiar a mano al pasar el cursor */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.btn-primary {
+    transform: scale(1.1); /* Agranda el botón un 10% */
+    background-color: #0056b3; /* Cambiar el color del fondo */
+}
+.alert-danger {
+margin-top: 20px; /* Espaciado hacia abajo del panel */
+    color: rgb(255, 255, 255); /* Color del texto */
+    background-color: #ea0606; /* Fondo rojo */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar el texto */
+    font-weight: bold; /* Texto en negrita */
+    max-width: 300px; /* Ajustar el ancho máximo */
+    margin-left: auto; /* Centrar el mensaje */
+    margin-right: auto; /* Centrar el mensaje */
+}
+</style>
+
+@code {
+    // Campo que almacena la cédula ingresada por el usuario
+    private string cedula = "";
+
+    // Campo que almacena la contraseña ingresada por el usuario
+    private string password = "";
+
+    // Campo que almacena el mensaje de error si ocurre algún problema al iniciar sesión
+    private string errorMessage = "";
+
+    // Método para manejar el proceso de inicio de sesión
+    private async Task HandleLogin()
+    {
+        try
+        {
+            // Llamar al servicio de agentes para autenticar al agente con la cédula y contraseña ingresadas
+            var agent = await AgentService.LoginAsync(cedula, password);
+            
+            // Si el agente existe, redirigir al registro de multas
+            if (agent != null)
+            {
+                NavigationManager.NavigateTo("/registro-multa");
+            }
+            else
+            {
+                // Si las credenciales son inválidas, mostrar un mensaje de error
+                errorMessage = "Credenciales inválidas";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Manejar cualquier excepción que ocurra durante el proceso de inicio de sesión
+            errorMessage = "Error al iniciar sesión";
+        }
+    }
+}
