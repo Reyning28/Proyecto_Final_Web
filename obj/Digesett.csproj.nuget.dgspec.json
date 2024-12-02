@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj": {}
+    "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_Web\\Digesett.csproj": {}
   },
   "projects": {
-    "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj": {
+    "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_Web\\Digesett.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
+        "projectUniqueName": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_Web\\Digesett.csproj",
         "projectName": "Digesett",
-        "projectPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
-        "packagesPath": "/Users/eduardoliriano/.nuget/packages/",
-        "outputPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/",
+        "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_Web\\Digesett.csproj",
+        "packagesPath": "C:\\Users\\rusbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eduardoliriano/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\rusbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

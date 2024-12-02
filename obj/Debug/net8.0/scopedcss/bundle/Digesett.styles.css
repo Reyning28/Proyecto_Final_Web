@@ -157,3 +157,41 @@
         overflow-y: auto;
     }
 }
+/* _content/Digesett/Components/Pages/Login/Login.razor.rz.scp.css */
+.login-container[b-vf0k7hyf5x] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centra verticalmente */
+    background-color: #f8f9fa; /* Fondo claro */
+}
+
+.login-box[b-vf0k7hyf5x] {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Ajusta el ancho del formulario */
+}
+
+.form-control[b-vf0k7hyf5x] {
+    width: 100%;
+    padding: 5px; /* Reduce el relleno interno */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 15px; /* Espaciado entre inputs */
+    border: 1px solid #ccc; /* Bordes suaves */
+    border-radius: 4px;
+}
+
+h3[b-vf0k7hyf5x] {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.btn-primary[b-vf0k7hyf5x] {
+    width: 100%; /* Botón del ancho completo */
+    padding: 10px;
+    font-size: 14px;
+}
