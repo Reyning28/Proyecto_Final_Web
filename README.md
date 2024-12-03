@@ -16,7 +16,6 @@ El Sistema de Gestión de Infracciones de Tránsito DIGESETT es una aplicación 
 - **Comisiones**: Revisar comisiones basadas en infracciones.
 
 ### 2. Módulo de Oficina Central
-- **Gestionar Multas**: Ver y gestionar infracciones, marcarlas como pagadas o perdonadas.
 - **Reporte de Ingresos**: Generar informes de ingresos por mes y año.
 - **Mapa de Multas**: Ver todas las infracciones en un mapa para un período seleccionado.
 - **Gestionar Agentes**: Agregar, editar y desactivar agentes.
