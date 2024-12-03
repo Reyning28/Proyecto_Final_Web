@@ -2,8 +2,20 @@
 @using Digesett.Models
 @using Digesett.Services
 @inject IAgentService AgentService
+@inject SessionService SessionService
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+@implements IDisposable
 
-<h3>Gestión de Multas</h3>
+@if (!SessionService.IsAuthenticated)
+{
+    <div class="alert alert-warning">
+        Debe iniciar sesión para acceder a esta página.
+    </div>
+    return;
+}
+
+<h3>Gestión de Multas - @SessionService.CurrentAgentName</h3>
 
 <div class="row mb-3">
     <div class="col-md-6">
@@ -64,26 +76,43 @@ else
     private List<Fine> fines;
     private string searchTerm = "";
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        await LoadFines();
+        SessionService.OnChange += StateHasChanged;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && SessionService.IsAuthenticated)
+        {
+            await LoadFines();
+            StateHasChanged();
+        }
+    }
+
+    public void Dispose()
+    {
+        SessionService.OnChange -= StateHasChanged;
     }
 
     private async Task LoadFines()
     {
-        // TODO: Implementar la carga de multas desde el servicio
-        fines = new List<Fine>();
+        if (!SessionService.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo("/login");
+            return;
+        }
+        fines = await AgentService.GetAgentFinesAsync(SessionService.CurrentAgentId);
     }
 
     private async Task SearchFines()
     {
-        // TODO: Implementar la búsqueda de multas
-        await LoadFines();
+        fines = await AgentService.SearchFines(SessionService.CurrentAgentId, searchTerm);
     }
 
     private async Task UpdateFineStatus(string fineId, string newStatus)
     {
-        // TODO: Implementar la actualización del estado de la multa
+        await AgentService.UpdateFineStatus(fineId, newStatus);
         await LoadFines();
     }
 }

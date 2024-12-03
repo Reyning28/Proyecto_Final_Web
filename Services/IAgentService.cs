@@ -1,6 +1,9 @@
 // Interfaz que define los métodos para el servicio de agentes
 using Digesett.Models;
 using Microsoft.AspNetCore.Components.Forms;
+using Digesett.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Digesett.Services
 {
@@ -28,5 +31,12 @@ namespace Digesett.Services
         Task<List<string>> GetConceptosAsync();
         Task AddConceptoAsync(string concepto);
         Task DeleteConceptoAsync(string concepto);
+        Task<List<Fine>> GetFinesByAgentId(string agentId);
+
+        Task UpdateFineStatus(string fineId, string newStatus);
+
+        Task<List<Fine>> SearchFines(string agentId, string searchTerm);
+
+
     }
 }

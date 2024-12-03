@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Digesett")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a4f5baeecceb4c565effbd26a7e9fd4ff586112")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42870654f5f950fc38f7fcaaf81d616431c8d5bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Digesett")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Digesett")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
