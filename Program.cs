@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
     builder.Services.AddScoped<IAgentService, AgentService>();
+    builder.Services.AddSingleton<SessionService>();
 // Configuración de SQLite
 builder.Services.AddDbContext<DigesettDbContext>(options => {
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));

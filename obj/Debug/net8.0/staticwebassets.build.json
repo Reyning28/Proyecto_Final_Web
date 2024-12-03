@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SNhETG/t7MZ0WgJagIr7ZwtL7Ve8wlTf/pQHnALdqoE=",
+  "Hash": "J7yH+CPn/AiHuon9+mK0phOD/bYabklUQsr27fB6ADo=",
   "Source": "Digesett",
   "BasePath": "_content/Digesett",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Digesett\\wwwroot",
+      "Name": "Digesett/wwwroot",
       "Source": "Digesett",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/Digesett.styles.css",
       "SourceId": "Digesett",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Digesett.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css"
+      "OriginalItemSpec": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/Digesett.styles.css"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/Digesett.bundle.scp.css",
       "SourceId": "Digesett",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Digesett.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css"
+      "OriginalItemSpec": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/Digesett.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\app.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/app.css",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\favicon.png",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/favicon.png",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\Images\\Aaron.jpg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Aaron.jpg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Images/Aaron.jpg",
       "AssetKind": "All",
@@ -147,13 +147,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Aaron.jpg"
+      "OriginalItemSpec": "wwwroot/Images/Aaron.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\Images\\Eduardo.jpeg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Eduardo.jpeg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Images/Eduardo.jpeg",
       "AssetKind": "All",
@@ -166,13 +166,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Eduardo.jpeg"
+      "OriginalItemSpec": "wwwroot/Images/Eduardo.jpeg"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\Images\\Jose Colon.jpeg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Jose Colon.jpeg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Images/Jose Colon.jpeg",
       "AssetKind": "All",
@@ -185,13 +185,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Jose Colon.jpeg"
+      "OriginalItemSpec": "wwwroot/Images/Jose Colon.jpeg"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\Images\\Reyning.jpg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/loading.gif",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
+      "BasePath": "_content/Digesett",
+      "RelativePath": "Images/loading.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/loading.gif"
+    },
+    {
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Reyning.jpg",
+      "SourceId": "Digesett",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "Images/Reyning.jpg",
       "AssetKind": "All",
@@ -204,13 +223,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Reyning.jpg"
+      "OriginalItemSpec": "wwwroot/Images/Reyning.jpg"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\js\\map.js",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/js/map.js",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "js/map.js",
       "AssetKind": "All",
@@ -223,13 +242,70 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\map.js"
+      "OriginalItemSpec": "wwwroot/js/map.js"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/comisiones.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
+      "BasePath": "_content/Digesett",
+      "RelativePath": "Modulo1/comisiones.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Modulo1/comisiones.webp"
+    },
+    {
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/mapa.jpg",
+      "SourceId": "Digesett",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
+      "BasePath": "_content/Digesett",
+      "RelativePath": "Modulo1/mapa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Modulo1/mapa.jpg"
+    },
+    {
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/multa.jpeg",
+      "SourceId": "Digesett",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
+      "BasePath": "_content/Digesett",
+      "RelativePath": "Modulo1/multa.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Modulo1/multa.jpeg"
+    },
+    {
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
+      "SourceId": "Digesett",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
       "AssetKind": "All",
@@ -242,13 +318,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
+      "OriginalItemSpec": "wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
       "AssetKind": "All",
@@ -261,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp"
+      "OriginalItemSpec": "wwwroot/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
       "AssetKind": "All",
@@ -280,13 +356,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
+      "OriginalItemSpec": "wwwroot/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
     },
     {
-      "Identity": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User\\OneDrive\\Escritorio\\FinalWeb\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "RelativePath": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
       "AssetKind": "All",
@@ -299,7 +375,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp"
+      "OriginalItemSpec": "wwwroot/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp"
     }
   ]
 }

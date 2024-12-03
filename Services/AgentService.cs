@@ -3,10 +3,16 @@ using Digesett.Models;
 using Digesett.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Forms;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+
+
+
 
 namespace Digesett.Services
 {
-    public class AgentService : IAgentService
+    public class AgentService  : IAgentService
     {
         private readonly DigesettDbContext _context;
         private readonly IWebHostEnvironment _environment;
@@ -17,6 +23,32 @@ namespace Digesett.Services
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _environment = environment ?? throw new ArgumentNullException(nameof(environment));
         }
+
+       public async Task<List<Fine>> GetFinesByAgentId(string agentId)
+    {
+        return await _context.Fines
+            .Where(f => f.AgentId == agentId)
+            .ToListAsync();
+    }
+
+    public async Task UpdateFineStatus(string fineId, string newStatus)
+    {
+        var fine = await _context.Fines.FirstOrDefaultAsync(f => f.Id == fineId);
+        if (fine != null)
+        {
+            fine.Status = newStatus;
+            _context.Fines.Update(fine);
+            await _context.SaveChangesAsync();
+        }
+    }
+
+    public async Task<List<Fine>> SearchFines(string agentId, string searchTerm)
+    {
+        return await _context.Fines
+            .Where(f => f.AgentId == agentId && 
+                        (f.CitizenName.Contains(searchTerm) || f.CitizenCedula.Contains(searchTerm)))
+            .ToListAsync();
+    }
 
         // Método para autenticar a un agente basado en su cédula y contraseña
         public async Task<Agent> LoginAsync(string cedula, string password)

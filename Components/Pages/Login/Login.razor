@@ -2,6 +2,7 @@
 @page "/login"
 @using Digesett.Services
 @inject IAgentService AgentService
+@inject SessionService SessionService
 @inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 
@@ -113,48 +114,32 @@ margin-top: 20px; /* Espaciado hacia abajo del panel */
     private string errorMessage = string.Empty;
     private bool isLoading = false; // Variable para gestionar el estado de carga
 
-    private async Task HandleLogin()
+     private async Task HandleLogin()
     {
-        errorMessage = string.Empty; // Reseteamos el mensaje de error antes de hacer la validación
-
-        // Validación básica para asegurarnos de que ambos campos (cedula y contraseña) no estén vacíos
-        if (string.IsNullOrWhiteSpace(cedula) || string.IsNullOrWhiteSpace(password))
-        {
-            SetErrorMessage("Por favor, complete todos los campos.");
-            return; // Si los campos están vacíos, terminamos la ejecución aquí
-        }
-
-        isLoading = true; // Activamos el indicador de carga
-
         try
         {
-            // Intentamos autenticar al agente usando el servicio de login
+            // Llamar al servicio de agentes para autenticar al agente con la cédula y contraseña ingresadas
             var agent = await AgentService.LoginAsync(cedula, password);
-
-            // Si la autenticación es exitosa, redirigimos a la página de registro de multas
+            
+            // Si el agente existe, redirigir al registro de multas
             if (agent != null)
             {
+                // Establecer la información del agente en el SessionService
+                isLoading = true;
+                await Task.Delay(1000);
+                SessionService.SetCurrentAgent(agent.Id.ToString(), agent.Name);
                 NavigationManager.NavigateTo("/registro-multa");
             }
             else
             {
-                // Si las credenciales son inválidas, mostramos un mensaje de error
-                SetErrorMessage("Credenciales inválidas.");
+                // Si las credenciales son inválidas, mostrar un mensaje de error
+                errorMessage = "Credenciales inválidas";
             }
         }
-        catch
+        catch (Exception ex)
         {
-            // Si ocurre un error en el proceso de autenticación (por ejemplo, problemas de conexión), mostramos un mensaje general
-            SetErrorMessage("Error al iniciar sesión. Inténtelo más tarde.");
+            // Manejar cualquier excepción que ocurra durante el proceso de inicio de sesión
+            errorMessage = "Error al iniciar sesión";
         }
-        finally
-        {
-            isLoading = false; // Desactivamos el indicador de carga una vez terminado el proceso
-        }
-    }
-
-    private void SetErrorMessage(string message)
-    {
-        errorMessage = message;
     }
 }
