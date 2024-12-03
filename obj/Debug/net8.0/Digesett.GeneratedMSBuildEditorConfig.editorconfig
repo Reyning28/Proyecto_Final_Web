@@ -17,103 +17,105 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Digesett
 build_property.RootNamespace = Digesett
-build_property.ProjectDir = /Users/eduardoliriano/codigos/Proyecto web/Digesett/
+build_property.ProjectDir = C:\Users\perdo\Documents\GitHub\Proyecto_Final_Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/eduardoliriano/codigos/Proyecto web/Digesett
+build_property.MSBuildProjectDirectory = C:\Users\perdo\Documents\GitHub\Proyecto_Final_Web
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/App.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/DetallesMulta.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9EZXRhbGxlc011bHRhLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/DetallesMulta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEZXRhbGxlc011bHRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/ListaMultas.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MaXN0YU11bHRhcy5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/ListaMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaXN0YU11bHRhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Login/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Mb2dpbi9Mb2dpbi5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Login/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMb2dpblxMb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo1/AcercaDe.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8xL0FjZXJjYURlLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo1/AcercaDe.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8xXEFjZXJjYURlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo1/Comisiones.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8xL0NvbWlzaW9uZXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo1/Comisiones.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8xXENvbWlzaW9uZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo1/MapaMultas.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8xL01hcGFNdWx0YXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo1/MapaMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8xXE1hcGFNdWx0YXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo1/ModuloAgentes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8xL01vZHVsb0FnZW50ZXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo1/ModuloAgentes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8xXE1vZHVsb0FnZW50ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo1/RegistroMulta.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8xL1JlZ2lzdHJvTXVsdGEucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo1/RegistroMulta.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8xXFJlZ2lzdHJvTXVsdGEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo2/GestionAgentes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL0dlc3Rpb25BZ2VudGVzLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo2/GestionAgentes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8yXEdlc3Rpb25BZ2VudGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo2/GestionMultas.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL0dlc3Rpb25NdWx0YXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo2/GestionMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8yXEdlc3Rpb25NdWx0YXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo2/MapaMultas.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL01hcGFNdWx0YXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo2/MapaMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8yXE1hcGFNdWx0YXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo2/ModuloOficinaCentral.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL01vZHVsb09maWNpbmFDZW50cmFsLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo2/ModuloOficinaCentral.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8yXE1vZHVsb09maWNpbmFDZW50cmFsLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo2/ReporteIngresos.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8yL1JlcG9ydGVJbmdyZXNvcy5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo2/ReporteIngresos.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8yXFJlcG9ydGVJbmdyZXNvcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/GestionarConceptosMultas.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0dlc3Rpb25hckNvbmNlcHRvc011bHRhcy5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo3/GestionarConceptosMultas.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8zXEdlc3Rpb25hckNvbmNlcHRvc011bHRhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/GestionarUsuarios.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0dlc3Rpb25hclVzdWFyaW9zLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo3/GestionarUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8zXEdlc3Rpb25hclVzdWFyaW9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/ModuloAdministrativo.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL01vZHVsb0FkbWluaXN0cmF0aXZvLnJhem9y
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Pages/Modulo3/ModuloAdministrativo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNb2R1bG8zXE1vZHVsb0FkbWluaXN0cmF0aXZvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Routes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Layout/FinalLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvRmluYWxMYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-9wev5pm1o7
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Layout/FinalLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRmluYWxMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-y53yghnvls
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-0hn5nzu30t
+[C:/Users/perdo/Documents/GitHub/Proyecto_Final_Web/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-s14cfc14gv

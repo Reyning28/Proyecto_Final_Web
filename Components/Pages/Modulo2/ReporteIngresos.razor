@@ -1,5 +1,9 @@
 @page "/modulo2/reporte-ingresos"
+@using Digesett.Data
 @using Digesett.Models
+@using Microsoft.EntityFrameworkCore
+@inject DigesettDbContext DigesettDbContext
+@rendermode InteractiveServer
 
 <h3>Reporte de Ingresos</h3>
 
@@ -60,8 +64,8 @@
             </div>
         </div>
     </div>
-}
 
+   
 @code {
     private int selectedMonth = DateTime.Now.Month;
     private int selectedYear = DateTime.Now.Year;
@@ -74,9 +78,20 @@
         public decimal Total { get; set; }
     }
 
-    private async Task GenerateReport()
-    {
-        // TODO: Implementar la generación del reporte
-        reportData = new List<ReportItem>();
-    }
+private async Task GenerateReport()
+{
+    reportData = await DigesettDbContext.Fines
+        .Where(f => f.CreatedAt.Month == selectedMonth && f.CreatedAt.Year == selectedYear)
+        .GroupBy(f => f.Concept)
+        .Select(group => new ReportItem
+        {
+            Concept = group.Key,
+            Count = group.Count(),
+            Total = group.Sum(f => f.Amount)
+        })
+        .ToListAsync();
+        
+}
+
+}
 }
