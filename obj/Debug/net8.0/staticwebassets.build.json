@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "egnWWfshAkD1Jw4PfoIy74aVKzoXneYJgLOwHDzLUfY=",
+  "Hash": "J7yH+CPn/AiHuon9+mK0phOD/bYabklUQsr27fB6ADo=",
   "Source": "Digesett",
   "BasePath": "_content/Digesett",
   "Mode": "Default",
@@ -8,21 +8,21 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Digesett\\wwwroot",
+      "Name": "Digesett/wwwroot",
       "Source": "Digesett",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/Digesett.styles.css",
       "SourceId": "Digesett",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Digesett#[.{fingerprint}]?.styles.css",
+      "RelativePath": "Digesett.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,19 +31,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "pjnc5s0juo",
-      "Integrity": "NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css"
+      "OriginalItemSpec": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/bundle/Digesett.styles.css"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/Digesett.bundle.scp.css",
       "SourceId": "Digesett",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Digesett#[.{fingerprint}]!.bundle.scp.css",
+      "RelativePath": "Digesett.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,1928 +50,332 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "pjnc5s0juo",
-      "Integrity": "NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css"
+      "OriginalItemSpec": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/Debug/net8.0/scopedcss/projectbundle/Digesett.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\app.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/app.css",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "app#[.{fingerprint}]?.css",
+      "RelativePath": "app.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "da95v2qkru",
-      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6gzpyzhau4",
-      "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8inm30yfxf",
-      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\favicon.png",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/favicon.png",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "RelativePath": "favicon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ifv42okdf2",
-      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Aaron.jpg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Aaron.jpg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Images/Aaron#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/Aaron.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ek7orqu0us",
-      "Integrity": "Tr/rG0OymOBBQXYivJmlu2mO7KepxQCBZfm1OV4VAAw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Aaron.jpg"
+      "OriginalItemSpec": "wwwroot/Images/Aaron.jpg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Eduardo.jpeg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Eduardo.jpeg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Images/Eduardo#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/Eduardo.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9rqxeontvi",
-      "Integrity": "teNM5i4BCalsZH0I8H2FidpIDXyE1VWbYGcDVUAGCUU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Eduardo.jpeg"
+      "OriginalItemSpec": "wwwroot/Images/Eduardo.jpeg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Jose Colon.jpeg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Jose Colon.jpeg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Images/Jose Colon#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Images/Jose Colon.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pclmsmlwvr",
-      "Integrity": "Z+ZIOjnF0wa/DqjKvAbMFGbA5O3TRNqwZUayHZCSJEs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Jose Colon.jpeg"
+      "OriginalItemSpec": "wwwroot/Images/Jose Colon.jpeg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\loading.gif",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/loading.gif",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Images/loading#[.{fingerprint}]?.gif",
+      "RelativePath": "Images/loading.gif",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "35jojjv6f5",
-      "Integrity": "GfpR0u1siSqB2gJSE0GyGlNM/k3AocAeJZWFREGI7T4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\loading.gif"
+      "OriginalItemSpec": "wwwroot/Images/loading.gif"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Reyning.jpg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Images/Reyning.jpg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Images/Reyning#[.{fingerprint}]?.jpg",
+      "RelativePath": "Images/Reyning.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "809ax1h98r",
-      "Integrity": "GAGkKPJ0tOk9oTBf9KJ9Vn+UMJ9s9hQTf1h7vp+zvnY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Reyning.jpg"
+      "OriginalItemSpec": "wwwroot/Images/Reyning.jpg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\js\\map.js",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/js/map.js",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "js/map#[.{fingerprint}]?.js",
+      "RelativePath": "js/map.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f3tliwmy08",
-      "Integrity": "izjxXquRu8Unj8MY0gUznpYFXT/TqGumA1U0WNJYD2Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\map.js"
+      "OriginalItemSpec": "wwwroot/js/map.js"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\comisiones.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/comisiones.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Modulo1/comisiones#[.{fingerprint}]?.webp",
+      "RelativePath": "Modulo1/comisiones.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lmoj4uuw1g",
-      "Integrity": "k2APLwU9hvS5yc077Ezmk3QvtgMe3GfIbjgAz+Yrb30=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Modulo1\\comisiones.webp"
+      "OriginalItemSpec": "wwwroot/Modulo1/comisiones.webp"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\mapa.jpg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/mapa.jpg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Modulo1/mapa#[.{fingerprint}]?.jpg",
+      "RelativePath": "Modulo1/mapa.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1kvjadqpi0",
-      "Integrity": "f1v5A/DAJCG1Xr+dCEGT9nEGPZtvAVFO0uqwLdbMvXM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Modulo1\\mapa.jpg"
+      "OriginalItemSpec": "wwwroot/Modulo1/mapa.jpg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\multa.jpeg",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/Modulo1/multa.jpeg",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "Modulo1/multa#[.{fingerprint}]?.jpeg",
+      "RelativePath": "Modulo1/multa.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jinpgk6lao",
-      "Integrity": "S8OAWzYTp4AIZiR8H+twI5EBHQcIX4fscLy7V2+ZyZM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Modulo1\\multa.jpeg"
+      "OriginalItemSpec": "wwwroot/Modulo1/multa.jpeg"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2#[.{fingerprint}]?.webp",
+      "RelativePath": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1p7990yfhk",
-      "Integrity": "NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
+      "OriginalItemSpec": "wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282#[.{fingerprint}]?.webp",
+      "RelativePath": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1p7990yfhk",
-      "Integrity": "NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp"
+      "OriginalItemSpec": "wwwroot/uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6#[.{fingerprint}]?.webp",
+      "RelativePath": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1p7990yfhk",
-      "Integrity": "NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
+      "OriginalItemSpec": "wwwroot/uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
     },
     {
-      "Identity": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp",
+      "Identity": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
       "SourceId": "Digesett",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\",
+      "ContentRoot": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/",
       "BasePath": "_content/Digesett",
-      "RelativePath": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1#[.{fingerprint}]?.webp",
+      "RelativePath": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1p7990yfhk",
-      "Integrity": "NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "app.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2591"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
-        }
-      ]
-    },
-    {
-      "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2591"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "da95v2qkru"
-        },
-        {
-          "Name": "label",
-          "Value": "app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6gzpyzhau4"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "162726"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8inm30yfxf"
-        },
-        {
-          "Name": "label",
-          "Value": "bootstrap/bootstrap.min.css.map"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "449111"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/plain"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
-        }
-      ]
-    },
-    {
-      "Route": "Digesett.bundle.scp.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs="
-        }
-      ]
-    },
-    {
-      "Route": "Digesett.pjnc5s0juo.bundle.scp.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Digesett.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pjnc5s0juo"
-        },
-        {
-          "Name": "label",
-          "Value": "Digesett.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs="
-        }
-      ]
-    },
-    {
-      "Route": "Digesett.pjnc5s0juo.styles.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pjnc5s0juo"
-        },
-        {
-          "Name": "label",
-          "Value": "Digesett.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs="
-        }
-      ]
-    },
-    {
-      "Route": "Digesett.styles.css",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Digesett.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5571"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NddPvDQ7Deljwwl+UXWhiSopQIzBdT3eON8a2u0xbRs="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ifv42okdf2"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.png",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\favicon.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1148"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Aaron.ek7orqu0us.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Aaron.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "158681"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Tr/rG0OymOBBQXYivJmlu2mO7KepxQCBZfm1OV4VAAw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ek7orqu0us"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/Aaron.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Tr/rG0OymOBBQXYivJmlu2mO7KepxQCBZfm1OV4VAAw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Aaron.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Aaron.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "158681"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Tr/rG0OymOBBQXYivJmlu2mO7KepxQCBZfm1OV4VAAw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Tr/rG0OymOBBQXYivJmlu2mO7KepxQCBZfm1OV4VAAw="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Eduardo.9rqxeontvi.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Eduardo.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "59260"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"teNM5i4BCalsZH0I8H2FidpIDXyE1VWbYGcDVUAGCUU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9rqxeontvi"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/Eduardo.jpeg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-teNM5i4BCalsZH0I8H2FidpIDXyE1VWbYGcDVUAGCUU="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Eduardo.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Eduardo.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "59260"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"teNM5i4BCalsZH0I8H2FidpIDXyE1VWbYGcDVUAGCUU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-teNM5i4BCalsZH0I8H2FidpIDXyE1VWbYGcDVUAGCUU="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Jose Colon.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Jose Colon.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "121409"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Z+ZIOjnF0wa/DqjKvAbMFGbA5O3TRNqwZUayHZCSJEs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Z+ZIOjnF0wa/DqjKvAbMFGbA5O3TRNqwZUayHZCSJEs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Jose Colon.pclmsmlwvr.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Jose Colon.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "121409"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Z+ZIOjnF0wa/DqjKvAbMFGbA5O3TRNqwZUayHZCSJEs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "pclmsmlwvr"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/Jose Colon.jpeg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Z+ZIOjnF0wa/DqjKvAbMFGbA5O3TRNqwZUayHZCSJEs="
-        }
-      ]
-    },
-    {
-      "Route": "Images/loading.35jojjv6f5.gif",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\loading.gif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "91337"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/gif"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GfpR0u1siSqB2gJSE0GyGlNM/k3AocAeJZWFREGI7T4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "35jojjv6f5"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/loading.gif"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GfpR0u1siSqB2gJSE0GyGlNM/k3AocAeJZWFREGI7T4="
-        }
-      ]
-    },
-    {
-      "Route": "Images/loading.gif",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\loading.gif",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "91337"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/gif"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GfpR0u1siSqB2gJSE0GyGlNM/k3AocAeJZWFREGI7T4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GfpR0u1siSqB2gJSE0GyGlNM/k3AocAeJZWFREGI7T4="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Reyning.809ax1h98r.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Reyning.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "494701"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GAGkKPJ0tOk9oTBf9KJ9Vn+UMJ9s9hQTf1h7vp+zvnY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "809ax1h98r"
-        },
-        {
-          "Name": "label",
-          "Value": "Images/Reyning.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GAGkKPJ0tOk9oTBf9KJ9Vn+UMJ9s9hQTf1h7vp+zvnY="
-        }
-      ]
-    },
-    {
-      "Route": "Images/Reyning.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Images\\Reyning.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "494701"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GAGkKPJ0tOk9oTBf9KJ9Vn+UMJ9s9hQTf1h7vp+zvnY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GAGkKPJ0tOk9oTBf9KJ9Vn+UMJ9s9hQTf1h7vp+zvnY="
-        }
-      ]
-    },
-    {
-      "Route": "js/map.f3tliwmy08.js",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\js\\map.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"izjxXquRu8Unj8MY0gUznpYFXT/TqGumA1U0WNJYD2Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "f3tliwmy08"
-        },
-        {
-          "Name": "label",
-          "Value": "js/map.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-izjxXquRu8Unj8MY0gUznpYFXT/TqGumA1U0WNJYD2Q="
-        }
-      ]
-    },
-    {
-      "Route": "js/map.js",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\js\\map.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1362"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"izjxXquRu8Unj8MY0gUznpYFXT/TqGumA1U0WNJYD2Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-izjxXquRu8Unj8MY0gUznpYFXT/TqGumA1U0WNJYD2Q="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/comisiones.lmoj4uuw1g.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\comisiones.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42816"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"k2APLwU9hvS5yc077Ezmk3QvtgMe3GfIbjgAz+Yrb30=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "lmoj4uuw1g"
-        },
-        {
-          "Name": "label",
-          "Value": "Modulo1/comisiones.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-k2APLwU9hvS5yc077Ezmk3QvtgMe3GfIbjgAz+Yrb30="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/comisiones.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\comisiones.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "42816"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"k2APLwU9hvS5yc077Ezmk3QvtgMe3GfIbjgAz+Yrb30=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-k2APLwU9hvS5yc077Ezmk3QvtgMe3GfIbjgAz+Yrb30="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/mapa.1kvjadqpi0.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\mapa.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6664"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f1v5A/DAJCG1Xr+dCEGT9nEGPZtvAVFO0uqwLdbMvXM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1kvjadqpi0"
-        },
-        {
-          "Name": "label",
-          "Value": "Modulo1/mapa.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-f1v5A/DAJCG1Xr+dCEGT9nEGPZtvAVFO0uqwLdbMvXM="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/mapa.jpg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\mapa.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6664"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"f1v5A/DAJCG1Xr+dCEGT9nEGPZtvAVFO0uqwLdbMvXM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-f1v5A/DAJCG1Xr+dCEGT9nEGPZtvAVFO0uqwLdbMvXM="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/multa.jinpgk6lao.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\multa.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "43383"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"S8OAWzYTp4AIZiR8H+twI5EBHQcIX4fscLy7V2+ZyZM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jinpgk6lao"
-        },
-        {
-          "Name": "label",
-          "Value": "Modulo1/multa.jpeg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-S8OAWzYTp4AIZiR8H+twI5EBHQcIX4fscLy7V2+ZyZM="
-        }
-      ]
-    },
-    {
-      "Route": "Modulo1/multa.jpeg",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\Modulo1\\multa.jpeg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "43383"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"S8OAWzYTp4AIZiR8H+twI5EBHQcIX4fscLy7V2+ZyZM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 16:37:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-S8OAWzYTp4AIZiR8H+twI5EBHQcIX4fscLy7V2+ZyZM="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.1p7990yfhk.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1p7990yfhk"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282.1p7990yfhk.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1p7990yfhk"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/8aa58666-da32-48ac-96a4-99039a2a0282.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\8aa58666-da32-48ac-96a4-99039a2a0282.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.1p7990yfhk.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1p7990yfhk"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\bf7daca2-fddf-4daa-9b2a-444e7249f4f6.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1.1p7990yfhk.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1p7990yfhk"
-        },
-        {
-          "Name": "label",
-          "Value": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
-    },
-    {
-      "Route": "uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp",
-      "AssetFile": "C:\\Users\\perdo\\Documents\\GitHub\\Proyecto_Final_Web\\wwwroot\\uploads\\fab3fff6-6586-4a17-859b-5d39782900c1.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67264"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 03 Dec 2024 13:22:57 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NRgECqTkUvdQR4zOmbFCl2rshqUY6LXmXYt94wOZm2E="
-        }
-      ]
+      "OriginalItemSpec": "wwwroot/uploads/fab3fff6-6586-4a17-859b-5d39782900c1.webp"
     }
   ]
 }

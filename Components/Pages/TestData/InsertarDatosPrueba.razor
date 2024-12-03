@@ -1,0 +1,116 @@
+@page "/insertar-datos-prueba"
+@using Digesett.Data
+@using Digesett.Models
+@using Digesett.Services
+@inject DigesettDbContext DigesettDbContext
+@rendermode InteractiveServer
+
+<h3>Insertar Datos de Prueba</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group mb-3">
+            <label>Cantidad de multas a generar:</label>
+            <input type="number" class="form-control" @bind="cantidadMultas" min="1" max="100" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Mes:</label>
+            <select class="form-select" @bind="mes">
+                @for (int i = 1; i <= 12; i++)
+                {
+                    <option value="@i">@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Año:</label>
+            <select class="form-select" @bind="año">
+                @for (int year = DateTime.Now.Year; year >= 2020; year--)
+                {
+                    <option value="@year">@year</option>
+                }
+            </select>
+        </div>
+
+        <button class="btn btn-primary" @onclick="GenerarMultas">Generar Multas</button>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(mensaje))
+{
+    <div class="alert alert-info mt-3">
+        @mensaje
+    </div>
+}
+
+@code {
+    private int cantidadMultas = 10;
+    private int mes = DateTime.Now.Month;
+    private int año = DateTime.Now.Year;
+    private string mensaje = "";
+    private Random random = new Random();
+
+    private string[] conceptos = new[]
+    {
+        "Exceso de velocidad",
+        "Semáforo en rojo",
+        "Estacionamiento prohibido",
+        "Sin licencia de conducir",
+        "Sin seguro obligatorio",
+        "Conducir en estado de ebriedad",
+        "No usar cinturón de seguridad",
+        "Uso del teléfono mientras conduce"
+    };
+
+    private string[] nombres = new[]
+    {
+        "Juan Pérez", "María García", "Pedro Rodríguez", "Ana Martínez",
+        "Luis González", "Carmen Sánchez", "José López", "Isabel Ramírez",
+        "Miguel Torres", "Rosa Díaz", "Francisco Ruiz", "Laura Morales"
+    };
+
+    private async Task GenerarMultas()
+    {
+        try
+        {
+            mensaje = "Generando multas...";
+            StateHasChanged();
+
+            for (int i = 0; i < cantidadMultas; i++)
+            {
+                var multa = new Fine
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    AgentId = "1", // ID del agente de prueba
+                    CitizenName = nombres[random.Next(nombres.Length)],
+                    CitizenCedula = GenerarCedulaAleatoria(),
+                    Amount = random.Next(500, 10001), // Multas entre 500 y 10,000
+                    Concept = conceptos[random.Next(conceptos.Length)],
+                    Description = "Multa de prueba generada automáticamente",
+                    Date = new DateTime(año, mes, random.Next(1, DateTime.DaysInMonth(año, mes) + 1)),
+                    CreatedAt = DateTime.UtcNow,
+                    Status = random.Next(100) < 70 ? "Cobrada" : "Pendiente", // 70% de probabilidad de estar cobrada
+                    Latitude = 18.4861 + (random.NextDouble() - 0.5) * 0.1, // Coordenadas aleatorias alrededor de Santo Domingo
+                    Longitude = -69.9312 + (random.NextDouble() - 0.5) * 0.1,
+                    PhotoUrl = "/images/multa-default.jpg"
+                };
+
+                DigesettDbContext.Fines.Add(multa);
+            }
+
+            await DigesettDbContext.SaveChangesAsync();
+            mensaje = $"Se han generado {cantidadMultas} multas exitosamente para {System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(mes)} {año}";
+        }
+        catch (Exception ex)
+        {
+            mensaje = $"Error al generar las multas: {ex.Message}";
+        }
+    }
+
+    private string GenerarCedulaAleatoria()
+    {
+        return $"{random.Next(1, 999):D3}-{random.Next(0, 9999999):D7}-{random.Next(1, 9):D1}";
+    }
+}
