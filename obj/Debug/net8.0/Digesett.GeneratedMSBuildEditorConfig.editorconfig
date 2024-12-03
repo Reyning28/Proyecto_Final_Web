@@ -102,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL01vZHVsb0FkbWluaXN0cmF0aXZvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/TestData/InsertarDatosPrueba.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9UZXN0RGF0YS9JbnNlcnRhckRhdG9zUHJ1ZWJhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

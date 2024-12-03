@@ -1,7 +1,14 @@
 @page "/modulo2/reporte-ingresos"
+@using Digesett.Data
 @using Digesett.Models
+@using Digesett.Services
+@using Microsoft.EntityFrameworkCore
+@using System.Globalization
+@inject DigesettDbContext DigesettDbContext
+@inject SessionService SessionService
+@rendermode InteractiveServer
 
-<h3>Reporte de Ingresos</h3>
+<h3>Reporte de Ingresos por Comisiones</h3>
 
 <div class="row mb-3">
     <div class="col-md-6">
@@ -29,14 +36,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Resumen de Ingresos - @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(selectedMonth) @selectedYear</h5>
+                    <h5 class="card-title">Resumen de Comisiones - @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(selectedMonth) @selectedYear</h5>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th>Tipo de Multa</th>
                                     <th>Cantidad</th>
-                                    <th>Total Ingresado</th>
+                                    <th>Total Cobrado</th>
+                                    <th>Comisión (10%)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,13 +53,15 @@
                                     <tr>
                                         <td>@item.Concept</td>
                                         <td>@item.Count</td>
-                                        <td>@item.Total.ToString("C")</td>
+                                        <td>$@item.Total.ToString("N2")</td>
+                                        <td>$@item.Commission.ToString("N2")</td>
                                     </tr>
                                 }
                                 <tr class="table-info">
                                     <td><strong>Total General</strong></td>
                                     <td><strong>@reportData.Sum(x => x.Count)</strong></td>
-                                    <td><strong>@reportData.Sum(x => x.Total).ToString("C")</strong></td>
+                                    <td><strong>$@reportData.Sum(x => x.Total).ToString("N2")</strong></td>
+                                    <td><strong>$@reportData.Sum(x => x.Commission).ToString("N2")</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -59,6 +69,12 @@
                 </div>
             </div>
         </div>
+    </div>
+}
+else if (reportData != null)
+{
+    <div class="alert alert-info">
+        No se encontraron multas cobradas para el período seleccionado.
     </div>
 }
 
@@ -72,11 +88,36 @@
         public string Concept { get; set; }
         public int Count { get; set; }
         public decimal Total { get; set; }
+        public decimal Commission { get; set; }
     }
 
     private async Task GenerateReport()
     {
-        // TODO: Implementar la generación del reporte
-        reportData = new List<ReportItem>();
+        if (!SessionService.IsAuthenticated)
+        {
+            return;
+        }
+
+        var startDate = new DateTime(selectedYear, selectedMonth, 1);
+        var endDate = startDate.AddMonths(1).AddDays(-1);
+
+        // Get the current agent's ID
+        var agentId = SessionService.CurrentAgentId;
+
+        // Query fines for the selected month and year, filtered by agent ID and only paid fines
+        reportData = await DigesettDbContext.Fines
+            .Where(f => f.CreatedAt >= startDate && 
+                       f.CreatedAt <= endDate &&
+                       f.AgentId == agentId &&
+                       f.Status == "Cobrada") // Solo multas cobradas
+            .GroupBy(f => f.Concept)
+            .Select(group => new ReportItem
+            {
+                Concept = group.Key,
+                Count = group.Count(),
+                Total = group.Sum(f => f.Amount),
+                Commission = group.Sum(f => f.Amount * 0.10m) // Calcular comisión del 10%
+            })
+            .ToListAsync();
     }
 }

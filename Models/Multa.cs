@@ -1,5 +1,7 @@
 // Importación de bibliotecas necesarias
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Digesett.Models
 {
@@ -50,5 +52,10 @@ namespace Digesett.Models
 
         // Identificador del agente que emitió la multa
         public string AgentId { get; set; }
+
+        //fecha
+        public DateTime Date {get; set;}
+
+        
     }
 }
