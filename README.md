@@ -26,10 +26,7 @@ El Sistema de Gestión de Infracciones de Tránsito DIGESETT es una aplicación 
 - **Autenticación**: (Pendiente) Añadir autenticación para acceder al módulo administrativo.
 
 ## Funcionalidades Pendientes para el Módulo 2
-- **Gestionar Multas**: Traer las multas creadas por el agente y permitir editar su estado.
-- **Reporte de Ingresos**: Ver el reporte de ingresos en base a las comisiones ganadas por el agente.
 - **Gestionar Agentes**: Agregar, editar y desactivar agentes.
-- **Estilos y Diseño**: Aplicar diseños a algunas páginas para mejorar la experiencia del usuario.
 
 ## Funcionalidades Pendientes para el Módulo 3
 - Implementar autenticación para el acceso al módulo.
