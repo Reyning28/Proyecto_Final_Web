@@ -65,6 +65,21 @@ namespace Digesett.Services
             return agent;
         }
 
+        // Método para autenticar a un agente basado en su nombre y contraseña
+        public async Task<Agent> LoginAsyncSuperUser(string name, string password)
+        {
+            var agent = await _context.Agents
+                .FirstOrDefaultAsync(a => a.Name == name && a.IsActive);
+
+            if (agent == null)
+                return null;
+
+            if (!BCrypt.Net.BCrypt.Verify(password, agent.Password))
+                return null;
+
+            return agent;
+        }
+
         // Método para obtener las multas asociadas a un agente
         public async Task<List<Fine>> GetAgentFinesAsync(string agentId)
         {

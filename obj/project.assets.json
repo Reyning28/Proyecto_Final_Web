@@ -3276,25 +3276,27 @@
     ]
   },
   "packageFolders": {
-    "/Users/eduardoliriano/.nuget/packages/": {}
+    "C:\\Users\\Dell E7450\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
+      "projectUniqueName": "C:\\Users\\Dell E7450\\OneDrive\\Escritorio\\Proyecto_Final_Web-main\\Digesett.csproj",
       "projectName": "Digesett",
-      "projectPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/Digesett.csproj",
-      "packagesPath": "/Users/eduardoliriano/.nuget/packages/",
-      "outputPath": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/obj/",
+      "projectPath": "C:\\Users\\Dell E7450\\OneDrive\\Escritorio\\Proyecto_Final_Web-main\\Digesett.csproj",
+      "packagesPath": "C:\\Users\\Dell E7450\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell E7450\\OneDrive\\Escritorio\\Proyecto_Final_Web-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/eduardoliriano/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Dell E7450\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3362,7 +3364,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

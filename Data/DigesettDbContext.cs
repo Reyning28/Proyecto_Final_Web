@@ -43,6 +43,7 @@ namespace Digesett.Data
                 .HasForeignKey(f => f.AgentId)  // Clave foránea para la relación
                 .OnDelete(DeleteBehavior.Restrict);  // Restricción de eliminación para evitar borrados en cascada
 
+
             // Datos de prueba para el agente
             modelBuilder.Entity<Agent>().HasData(
                 new Agent
@@ -51,6 +52,17 @@ namespace Digesett.Data
                     Cedula = "001-0000000-0",
                     Name = "Agente Demo",
                     Password = BCrypt.Net.BCrypt.HashPassword("123456") // Contraseña hasheada para mayor seguridad
+                }
+            );
+
+            // Datos del Super Usuario 
+            modelBuilder.Entity<Agent>().HasData(
+                new Agent
+                {
+                    Id = "2",
+                    Cedula = "002-0000000-0",
+                    Name = "adamix",
+                    Password = BCrypt.Net.BCrypt.HashPassword("estoesfacil") // Contraseña hasheada para mayor seguridad
                 }
             );
         }

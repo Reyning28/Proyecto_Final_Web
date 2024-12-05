@@ -12,6 +12,9 @@ namespace Digesett.Services
         // Método para autenticar a un agente basado en su cédula y contraseña
         Task<Agent> LoginAsync(string cedula, string password);
 
+        // Método para autenticar a un agente basado  nombre y contraseña
+        Task<Agent> LoginAsyncSuperUser(string name, string password);
+
         // Método para obtener las multas asociadas a un agente
         Task<List<Fine>> GetAgentFinesAsync(string agentId);
 
@@ -36,7 +39,6 @@ namespace Digesett.Services
         Task UpdateFineStatus(string fineId, string newStatus);
 
         Task<List<Fine>> SearchFines(string agentId, string searchTerm);
-
 
     }
 }

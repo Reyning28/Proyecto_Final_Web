@@ -1,5 +1,4 @@
-@page "/administrativo"
-@page "/login/administrativo"
+<!--"/login/administrativo"-->
 @using Digesett.Services
 @inject IAgentService AgentService
 @inject SessionService SessionService
@@ -8,7 +7,7 @@
 
 <div class="login-container">
     <div class="login-box">
-        <h3> Acceso de Agentes Administrativos</h3>
+        <h3>DIGESETT - Acceso de Agentes</h3>
 
         <!-- Campo para ingresar el nombre de usuario -->
         <div>
@@ -47,65 +46,65 @@
 
 <style>
     .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
     }
 
     .login-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
     }
 
     .form-control {
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+        width: 100%;
+        padding: 5px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
     h3 {
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
     }
 
     .btn-primary {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    background-color: #0562c5;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        background-color: #0562c5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     .btn-primary:hover {
-    transform: scale(1.1);
-    background-color: #1074df;
+        transform: scale(1.1);
+        background-color: #1074df;
     }
 
     .alert-danger {
-    margin-top: 20px;
-    color: white;
-    background-color: #ea0606;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+        margin-top: 20px;
+        color: white;
+        background-color: #ea0606;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-align: center;
+        font-weight: bold;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>
 
@@ -129,15 +128,14 @@
                 // Establecer la información del agente en el SessionService
                 await Task.Delay(1000); // Simula el tiempo de carga
                 SessionService.SetCurrentAgent(agent.Id.ToString(), agent.Name);
-                NavigationManager.NavigateTo("/administrativo/gestionar-usuarios");
+                NavigationManager.NavigateTo("/login/administrativo");
             }
             else
             {
                 errorMessage = "Credenciales inválidas";
             }
         }
-        catch (Exception)
-
+        catch (Exception ex)
         {
             errorMessage = "Error al iniciar sesión";
         }
@@ -146,19 +144,4 @@
             isLoading = false;
         }
     }
-}
-
-<h1>Módulo Administrativo</h1>
-
-<p>Bienvenido al módulo administrativo. Aquí puedes gestionar los usuarios de la oficina central y los conceptos de multas.</p>
-
-<ul>
-    <li>Gestionar Usuarios</li>
-    <li>Gestionar Conceptos de Multas</li>
-</ul>
-
-@code {
-    // Autenticación básica para el módulo administrativo
-    private string usuario = "adamix";
-    private string clave = "estoesfacil";
 }
