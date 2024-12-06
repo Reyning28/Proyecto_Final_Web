@@ -40,5 +40,11 @@ namespace Digesett.Services
 
         Task<List<Fine>> SearchFines(string agentId, string searchTerm);
 
+        Task<List<Fine>> GetAgentFinesByMonthAndYearAsync(string agentId, int month, int year);
+
+        // Métodos para gestión de agentes
+        Task<Agent> CreateAgentAsync(Agent agent);
+        Task<List<Agent>> GetAllAgentsAsync();
+        Task DeleteAgentAsync(string agentId);
     }
 }

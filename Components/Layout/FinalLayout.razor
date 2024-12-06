@@ -19,7 +19,7 @@
                         <ul class="dropdown-menu" aria-labelledby="modulosDropdown">
                             <li><a class="dropdown-item" href="/agentes">Módulo Agentes</a></li>
                             <li><a class="dropdown-item" href="/oficina-central">Módulo Oficina Central</a></li>
-                            <li><a class="dropdown-item" href="/administrativo">Módulo Administrativo </a></li>
+                            <li><a class="dropdown-item" href="/login-superuser">Módulo Administrativo </a></li>
                         </ul>
                     </li>
                     @if (IsInModuleAgentes)
@@ -123,5 +123,7 @@
                                             NavigationManager.Uri.Contains("/modulo2/gestion-agentes");
 
     // Verifica si la URL actual corresponde al Módulo Administrativo
-    private bool IsInModuleAdministrativo => NavigationManager.Uri.Contains("/administrativo");
+    private bool IsInModuleAdministrativo => NavigationManager.Uri.Contains("/login-superuser")||
+                                            NavigationManager.Uri.Contains("/administrativo/gestionar-usuarios") ||
+                                            NavigationManager.Uri.Contains("/administrativo/gestionar-conceptos-multas");
 }

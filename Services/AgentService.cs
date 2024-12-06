@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Forms;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+
+
 
 
 
@@ -15,12 +18,14 @@ namespace Digesett.Services
     public class AgentService  : IAgentService
     {
         private readonly DigesettDbContext _context;
+        private readonly ILogger<AgentService> _logger;
         private readonly IWebHostEnvironment _environment;
 
         // Constructor que inicializa el contexto de base de datos y el entorno del host web
-        public AgentService(DigesettDbContext context, IWebHostEnvironment environment)
+        public AgentService(DigesettDbContext context, ILogger<AgentService> logger, IWebHostEnvironment environment)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
+            _logger = logger;
             _environment = environment ?? throw new ArgumentNullException(nameof(environment));
         }
 
@@ -175,6 +180,126 @@ namespace Digesett.Services
             {
                 _context.ConceptosMultas.Remove(conceptoToDelete);
                 await _context.SaveChangesAsync();
+            }
+        }
+
+        // Obtener multas de un agente filtradas por mes y año
+        public async Task<List<Fine>> GetAgentFinesByMonthAndYearAsync(string agentId, int month, int year)
+        {
+            try
+            {
+                _logger.LogInformation($"Buscando multas para el agente {agentId} en {month}/{year}");
+
+                // Calcular el primer y último día del mes
+                var startDate = new DateTime(year, month, 1);
+                var endDate = startDate.AddMonths(1).AddDays(-1);
+
+                // Obtener las multas que coincidan con el mes y año especificados
+                var multas = await _context.Fines
+                    .Where(f => f.AgentId == agentId &&
+                               f.CreatedAt >= startDate &&
+                               f.CreatedAt <= endDate)
+                    .OrderByDescending(f => f.CreatedAt)
+                    .ToListAsync();
+
+                _logger.LogInformation($"Se encontraron {multas.Count} multas para el período especificado");
+                return multas;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error al obtener multas del agente {agentId} para {month}/{year}");
+                throw;
+            }
+        }
+
+        // Método para crear un nuevo agente
+        public async Task<Agent> CreateAgentAsync(Agent agent)
+        {
+            try
+            {
+                _logger.LogInformation($"Creando nuevo agente con cédula: {agent.Cedula}");
+
+                // Verificar si ya existe un agente con la misma cédula
+                var existingAgent = await _context.Agents
+                    .FirstOrDefaultAsync(a => a.Cedula == agent.Cedula);
+
+                if (existingAgent != null)
+                {
+                    throw new InvalidOperationException("Ya existe un agente con esta cédula");
+                }
+
+                // Hash de la contraseña antes de guardarla
+                agent.Password = BCrypt.Net.BCrypt.HashPassword(agent.Password);
+
+                // Asignar valores por defecto
+                agent.Id = Guid.NewGuid().ToString();
+                agent.CreatedAt = DateTime.UtcNow;
+                agent.IsActive = true;
+
+                // Agregar el agente a la base de datos
+                await _context.Agents.AddAsync(agent);
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation($"Agente creado exitosamente con ID: {agent.Id}");
+                return agent;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al crear agente");
+                throw;
+            }
+        }
+
+        // Método para obtener todos los agentes
+        public async Task<List<Agent>> GetAllAgentsAsync()
+        {
+            try
+            {
+                return await _context.Agents
+                    .OrderByDescending(a => a.CreatedAt)
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error al obtener la lista de agentes");
+                throw;
+            }
+        }
+
+        // Método para eliminar un agente
+        public async Task DeleteAgentAsync(string agentId)
+        {
+            try
+            {
+                _logger.LogInformation($"Eliminando agente con ID: {agentId}");
+
+                var agent = await _context.Agents.FindAsync(agentId);
+                if (agent == null)
+                {
+                    throw new InvalidOperationException("Agente no encontrado");
+                }
+
+                // Verificar si el agente tiene multas asociadas
+                var hasFines = await _context.Fines.AnyAsync(f => f.AgentId == agentId);
+                if (hasFines)
+                {
+                    // En lugar de eliminar, marcar como inactivo
+                    agent.IsActive = false;
+                    _context.Agents.Update(agent);
+                }
+                else
+                {
+                    // Si no tiene multas, eliminar completamente
+                    _context.Agents.Remove(agent);
+                }
+
+                await _context.SaveChangesAsync();
+                _logger.LogInformation($"Agente {(hasFines ? "desactivado" : "eliminado")} exitosamente");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error al eliminar agente {agentId}");
+                throw;
             }
         }
     }

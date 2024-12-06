@@ -4,15 +4,141 @@
 <h1>Módulo de Oficina Central</h1>
 
 <!-- Descripción del módulo -->
-<p>Bienvenido al módulo de oficina central. Aquí puedes gestionar agentes, ver el reporte de ingresos y visualizar el
-    mapa de multas.</p>
+<p>Bienvenido al módulo de oficina central. Aquí puedes gestionar multas, ver reportes de ingresos y visualizar el mapa de multas.</p>
 
 <!-- Lista de enlaces para acceder a las diferentes secciones del módulo -->
 <ul>
-    <li><a href="/modulo2/gestion-multas">Gestionar Multas</a> </li> <!-- Enlace para gestionar multas -->
-    <li><a href="/modulo2/reporte-ingresos">Reporte de Ingresos</a> </li>
-    <!-- Enlace para ver el reporte de ingresos -->
-    <li><a href="/modulo2/mapa-multas-central">Mapa de Multas</a> </li> <!-- Enlace para ver el mapa de multas -->
-    <li><a href="/modulo2/gestion-agentes">Gestionar Agentes</a> </li> <!-- Enlace para gestionar agentes -->
+    <li id="gestion-multas">
+        <a href="/modulo2/gestion-multas">
+            <div class="panel">
+                <img src="Modulo2/multas.jpg" alt="Gestión de Multas" />
+                <div class="text">
+                    <h3>Gestión de Multas</h3>
+                    <p>Administrar y actualizar el estado de las multas registradas.</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li id="reportes">
+        <a href="/modulo2/reporte-ingresos">
+            <div class="panel">
+                <img src="Modulo2/reportes.jpg" alt="Reportes de Ingresos" />
+                <div class="text">
+                    <h3>Reportes de Ingresos</h3>
+                    <p>Visualizar informes detallados de ingresos por multas.</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li id="mapa">
+        <a href="/modulo2/mapa-multas-central">
+            <div class="panel">
+                <img src="Modulo2/mapa.jpg" alt="Mapa de Multas" />
+                <div class="text">
+                    <h3>Mapa de Multas</h3>
+                    <p>Ver la distribución geográfica de las multas.</p>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li id="agentes">
+        <a href="/modulo2/gestion-agentes">
+            <div class="panel">
+                <img src="Modulo2/agentes.jpg" alt="Gestión de Agentes" />
+                <div class="text">
+                    <h3>Gestión de Agentes</h3>
+                    <p>Administrar los agentes de tránsito registrados.</p>
+                </div>
+            </div>
+        </a>
+    </li>
 </ul>
 
+<style>
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .panel {
+        width: 250px;
+        height: 300px;
+        background-color: #369e053b;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .panel img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .panel .text {
+        margin-top: 10px;
+    }
+
+    .panel .text h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+
+    .panel .text p {
+        font-size: 14px;
+        color: #666;
+        margin: 5px 0 0;
+    }
+
+    #gestion-multas:hover .panel,
+    #reportes:hover .panel,
+    #mapa:hover .panel,
+    #agentes:hover .panel {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    media (max-width: 768px) {
+        ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .panel {
+            width: 90%;
+            max-width: 300px;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+</style>
