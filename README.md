@@ -37,3 +37,6 @@ El Sistema de Gestión de Infracciones de Tránsito DIGESETT es una aplicación 
 - Entity Framework Core
 - Bootstrap
 - BCrypt.Net para el hash de contraseñas
+
+## contra 
+- 123456

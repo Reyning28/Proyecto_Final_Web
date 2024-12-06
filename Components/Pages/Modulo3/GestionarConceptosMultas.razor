@@ -1,64 +1,68 @@
 @page "/administrativo/gestionar-conceptos-multas"
+@using Digesett.Components.Auth
 @inject Digesett.Services.IAgentService AgentService
 @rendermode InteractiveServer
 
-<div class="container mt-4">
-    <h1 class="text-center mt-4">Gestionar Conceptos de Multas</h1>
-    <p class="text-center">Aquí puedes agregar, editar y eliminar conceptos de multas que serán utilizados por los agentes.</p>
+<RequireSuperUser>
+    <div class="container mt-4">
+        <h1 class="text-center mt-4">Gestionar Conceptos de Multas</h1>
+        <p class="text-center">Aquí puedes agregar, editar y eliminar conceptos de multas que serán utilizados por los agentes.</p>
 
-    <!-- Tabla de conceptos de multas -->
-    <table class="table table-striped mt-4">
-        <thead>
-            <tr>
-                <th>Concepto</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var concepto in conceptos)
-            {
+        <!-- Tabla de conceptos de multas -->
+        <table class="table table-striped mt-4">
+            <thead>
                 <tr>
-                    <td>@concepto</td>
-                    <td>
-                        <button class="btn btn-danger btn-sm" @onclick="() => DeleteConcepto(concepto)">Eliminar</button>
-                    </td>
+                    <th>Concepto</th>
+                    <th>Acciones</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var concepto in conceptos)
+                {
+                    <tr>
+                        <td>@concepto</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm" @onclick="() => DeleteConcepto(concepto)">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-    <!-- Formulario para agregar nuevos conceptos de multas -->
-    <form class="form-inline justify-content-center mt-4" @onsubmit="AddConcepto">
-        <div class="form-group mb-2">
-            <label for="concepto" class="sr-only">Concepto:</label>
-            <input type="text" class="form-control" id="concepto" name="concepto" placeholder="Concepto" @bind="nuevoConcepto">
-        </div>
-        <button type="submit" class="btn btn-primary mb-2">Agregar</button>
-    </form>
-</div>
+        <!-- Formulario para agregar nuevos conceptos de multas -->
+        <form class="form-inline justify-content-center mt-4" @onsubmit="AddConcepto">
+            <div class="form-group mb-2">
+                <label for="concepto" class="sr-only">Concepto:</label>
+                <input type="text" class="form-control" id="concepto" name="concepto" placeholder="Concepto" @bind="nuevoConcepto">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Agregar</button>
+        </form>
+    </div>
 
-@code {
-    private List<string> conceptos = new List<string>();
-    private string nuevoConcepto;
+    @code {
 
-    protected override async Task OnInitializedAsync()
-    {
-        conceptos = await AgentService.GetConceptosAsync();
-    }
+        private List<string> conceptos = new List<string>();
+        private string nuevoConcepto;
 
-    private async Task AddConcepto()
-    {
-        if (!string.IsNullOrWhiteSpace(nuevoConcepto) && !conceptos.Contains(nuevoConcepto))
+        protected override async Task OnInitializedAsync()
         {
-            await AgentService.AddConceptoAsync(nuevoConcepto);
-            conceptos.Add(nuevoConcepto);
-            nuevoConcepto = string.Empty;
+            conceptos = await AgentService.GetConceptosAsync();
+        }
+
+        private async Task AddConcepto()
+        {
+            if (!string.IsNullOrWhiteSpace(nuevoConcepto) && !conceptos.Contains(nuevoConcepto))
+            {
+                await AgentService.AddConceptoAsync(nuevoConcepto);
+                conceptos.Add(nuevoConcepto);
+                nuevoConcepto = string.Empty;
+            }
+        }
+
+        private async Task DeleteConcepto(string concepto)
+        {
+            await AgentService.DeleteConceptoAsync(concepto);
+            conceptos.Remove(concepto);
         }
     }
-
-    private async Task DeleteConcepto(string concepto)
-    {
-        await AgentService.DeleteConceptoAsync(concepto);
-        conceptos.Remove(concepto);
-    }
-}
+</RequireSuperUser>

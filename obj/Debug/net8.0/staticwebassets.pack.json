@@ -57,6 +57,22 @@
       "PackagePath": "staticwebassets/js/map.js"
     },
     {
+      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/modulo2/agentes.jpg",
+      "PackagePath": "staticwebassets/modulo2/agentes.jpg"
+    },
+    {
+      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/modulo2/mapa.jpg",
+      "PackagePath": "staticwebassets/modulo2/mapa.jpg"
+    },
+    {
+      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/modulo2/multas.jpg",
+      "PackagePath": "staticwebassets/modulo2/multas.jpg"
+    },
+    {
+      "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/modulo2/reportes.jpg",
+      "PackagePath": "staticwebassets/modulo2/reportes.jpg"
+    },
+    {
       "Id": "/Users/eduardoliriano/codigos/Proyecto web/Digesett/wwwroot/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp",
       "PackagePath": "staticwebassets/uploads/46b99ed4-eaef-4bcb-82c6-e7a0f52916f2.webp"
     },

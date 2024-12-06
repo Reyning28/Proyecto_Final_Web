@@ -2,8 +2,19 @@
 @using Digesett.Services
 @using Digesett.Models
 @inject IAgentService AgentService
+@inject SessionService SessionService
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 @rendermode InteractiveServer
+
+@if (!SessionService.IsAuthenticated)
+{
+    <div class="alert alert-warning text-center">
+        <i class="fas fa-exclamation-triangle"></i>
+        Debe iniciar sesión para acceder a esta página.
+    </div>
+    return;
+}
 
 <div class="mapa-container">
     <h2>Mapa de Multas 🗺️</h2>
@@ -28,11 +39,30 @@
         margin-bottom: 20px;
         color: #333;
     }
+
+    .alert {
+        padding: 2rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+    }
+
+    .alert i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
 </style>
 
 @code {
     // Lista que almacena todas las multas registradas por el agente
     private List<Fine> multas;
+
+    protected override void OnInitialized()
+    {
+        if (!SessionService.IsAuthenticated)
+        {
+            NavigationManager.NavigateTo("/login", true);
+        }
+    }
 
     // Método que se ejecuta después de renderizar el componente
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -50,8 +80,8 @@
     {
         try
         {
-            // ID del agente (temporal hasta implementar la autenticación)
-            string agentId = "1";
+            // Obtener el ID del agente de la sesión
+            string agentId = SessionService.CurrentAgentId;
 
             // Obtener la lista de multas asociadas al agente
             multas = await AgentService.GetAgentFinesAsync(agentId);

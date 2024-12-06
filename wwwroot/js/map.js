@@ -21,6 +21,14 @@ window.getCurrentPosition = function () {
     });
 };
 
+window.cleanupMap = function() {
+    if (map) {
+        // Remover el mapa existente
+        map.remove();
+        map = null;
+    }
+};
+
 window.initializeMap = function (multas) {
     // Crear mapa centrado en República Dominicana
     map = L.map('map').setView([18.7357, -70.1627], 8);

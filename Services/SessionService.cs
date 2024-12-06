@@ -8,6 +8,7 @@ namespace Digesett.Services
         
         private string _currentAgentId;
         private string _currentAgentName;
+        private bool _isSuperUser = false;
         
         public string CurrentAgentId 
         { 
@@ -50,5 +51,15 @@ namespace Digesett.Services
         }
         
         private void NotifyStateChanged() => OnChange?.Invoke();
+
+        public async Task<bool> GetSuperUserSessionAsync()
+        {
+            return _isSuperUser;
+        }
+
+        public async Task SetSuperUserSessionAsync(bool value)
+        {
+            _isSuperUser = value;
+        }
     }
 }

@@ -2,6 +2,8 @@
 @using Digesett.Models
 @using Digesett.Services
 @inject IAgentService AgentService
+@inject IJSRuntime JSRuntime
+@rendermode InteractiveServer
 
 <h3>Gestión de Agentes</h3>
 
@@ -17,7 +19,6 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Cédula</th>
                     <th>Estado</th>
@@ -28,18 +29,13 @@
                 @foreach (var agent in agents)
                 {
                     <tr>
-                        <td>@agent.Id</td>
                         <td>@agent.Name</td>
                         <td>@agent.Cedula</td>
                         <td>@(agent.IsActive ? "Activo" : "Inactivo")</td>
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-info btn-sm" @onclick="() => ShowAgentModal(agent)">
-                                    Editar
-                                </button>
-                                <button class="btn @(agent.IsActive ? "btn-warning" : "btn-success") btn-sm" 
-                                        @onclick="() => ToggleAgentStatus(agent)">
-                                    @(agent.IsActive ? "Desactivar" : "Activar")
+                                <button class="btn btn-danger btn-sm" @onclick="() => DeleteAgent(agent)">
+                                    Eliminar
                                 </button>
                             </div>
                         </td>
@@ -60,22 +56,26 @@ else
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">@(selectedAgent == null ? "Agregar Agente" : "Editar Agente")</h5>
+                    <h5 class="modal-title">@(selectedAgent == null ? "Crear Nuevo Agente" : "Editar Agente")</h5>
                     <button type="button" class="btn-close" @onclick="CloseModal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label class="form-label">Nombre</label>
-                        <input type="text" class="form-control" @bind="agentName" />
+                        <label for="agentName" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="agentName" @bind="agentName" />
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Cédula</label>
-                        <input type="text" class="form-control" @bind="agentCedula" />
+                        <label for="agentCedula" class="form-label">Cédula:</label>
+                        <input type="text" class="form-control" id="agentCedula" @bind="agentCedula" />
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" @bind="agentPassword" />
+                        <label for="agentPassword" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="agentPassword" @bind="agentPassword" />
                     </div>
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger">@errorMessage</div>
+                    }
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" @onclick="CloseModal">Cancelar</button>
@@ -94,6 +94,7 @@ else
     private string agentName;
     private string agentCedula;
     private string agentPassword;
+    private string errorMessage;
 
     protected override async Task OnInitializedAsync()
     {
@@ -102,8 +103,7 @@ else
 
     private async Task LoadAgents()
     {
-        // TODO: Implementar la carga de agentes desde el servicio
-        agents = new List<Agent>();
+        agents = await AgentService.GetAllAgentsAsync();
     }
 
     private void ShowAgentModal(Agent agent = null)
@@ -121,6 +121,7 @@ else
             agentCedula = "";
             agentPassword = "";
         }
+        errorMessage = "";
         showModal = true;
     }
 
@@ -128,19 +129,54 @@ else
     {
         showModal = false;
         selectedAgent = null;
+        errorMessage = "";
     }
 
     private async Task SaveAgent()
     {
-        // TODO: Implementar el guardado del agente
-        await LoadAgents();
-        CloseModal();
+        try
+        {
+            if (string.IsNullOrWhiteSpace(agentName) || string.IsNullOrWhiteSpace(agentCedula) || string.IsNullOrWhiteSpace(agentPassword))
+            {
+                errorMessage = "Todos los campos son obligatorios";
+                return;
+            }
+
+            var newAgent = new Agent
+            {
+                Name = agentName,
+                Cedula = agentCedula,
+                Password = agentPassword,
+                IsActive = true
+            };
+
+            await AgentService.CreateAgentAsync(newAgent);
+            await LoadAgents();
+            CloseModal();
+        }
+        catch (InvalidOperationException ex)
+        {
+            errorMessage = ex.Message;
+        }
+        catch (Exception)
+        {
+            errorMessage = "Error al guardar el agente";
+        }
     }
 
-    private async Task ToggleAgentStatus(Agent agent)
+    private async Task DeleteAgent(Agent agent)
     {
-        agent.IsActive = !agent.IsActive;
-        // TODO: Implementar el guardado del cambio de estado
-        await LoadAgents();
+        try
+        {
+            if (await JSRuntime.InvokeAsync<bool>("confirm", new[] { $"¿Está seguro que desea eliminar al agente {agent.Name}?" }))
+            {
+                await AgentService.DeleteAgentAsync(agent.Id);
+                await LoadAgents();
+            }
+        }
+        catch (Exception)
+        {
+            errorMessage = "Error al eliminar el agente";
+        }
     }
 }

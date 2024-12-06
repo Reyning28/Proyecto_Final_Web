@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Auth/RequireSuperUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BdXRoL1JlcXVpcmVTdXBlclVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/DetallesMulta.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9EZXRhbGxlc011bHRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,8 +102,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0dlc3Rpb25hclVzdWFyaW9zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/ModuloAdministrativo.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL01vZHVsb0FkbWluaXN0cmF0aXZvLnJhem9y
+[/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/Modulo3/LoginSuperUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Nb2R1bG8zL0xvZ2luU3VwZXJVc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/eduardoliriano/codigos/Proyecto web/Digesett/Components/Pages/TestData/InsertarDatosPrueba.razor]

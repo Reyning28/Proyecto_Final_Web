@@ -1,0 +1,32 @@
+@inject NavigationManager NavigationManager
+@inject SessionService SessionService
+
+@if (isAuthorized)
+{
+    @ChildContent
+}
+else
+{
+    <div>Redirigiendo...</div>
+}
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    private bool isAuthorized = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var isSuperUser = await SessionService.GetSuperUserSessionAsync();
+        
+        if (!isSuperUser)
+        {
+            NavigationManager.NavigateTo("/login-superuser");
+        }
+        else
+        {
+            isAuthorized = true;
+        }
+    }
+}
