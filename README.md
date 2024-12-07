@@ -25,18 +25,13 @@ El Sistema de Gestión de Infracciones de Tránsito DIGESETT es una aplicación 
 - **Gestión de Usuarios**: (Pendiente) Implementar lógica para la gestión de usuarios.
 - **Autenticación**: (Pendiente) Añadir autenticación para acceder al módulo administrativo.
 
-## Funcionalidades Pendientes para el Módulo 2
-- **Gestionar Agentes**: Agregar, editar y desactivar agentes.
-
-## Funcionalidades Pendientes para el Módulo 3
-- Implementar autenticación para el acceso al módulo.
-- Desarrollar la lógica para la gestión de usuarios.
-
 ## Tecnologías Utilizadas
 - Blazor Server
 - Entity Framework Core
 - Bootstrap
 - BCrypt.Net para el hash de contraseñas
 
-## contra 
+##user
+- 001-0000000-0
+## password 
 - 123456
